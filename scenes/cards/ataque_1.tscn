@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://b82hcmn5etb15"]
+
+[ext_resource type="PackedScene" uid="uid://bjekvwsvl0b1h" path="res://scenes/cards/card_base.tscn" id="1_b3av0"]
+[ext_resource type="Texture2D" uid="uid://biktkbg7nnsp5" path="res://assets/Card Sprites/Minion/Alternate (3).png" id="2_odeio"]
+[ext_resource type="Texture2D" uid="uid://wjj3dk433ne2" path="res://assets/1.png" id="3_6ueas"]
+[ext_resource type="Texture2D" uid="uid://cnb511x6opq0" path="res://assets/Card Sprites/_Rarity/rarity (1).png" id="4_v8rol"]
+
+[node name="Ataque1" instance=ExtResource("1_b3av0")]
+
+[node name="Background" parent="." index="0"]
+texture = ExtResource("2_odeio")
+
+[node name="Cost" parent="Background/Cost" index="0"]
+text = "1"
+
+[node name="Sprite" parent="Background/CardBg" index="0"]
+texture = ExtResource("3_6ueas")
+
+[node name="Name" parent="Background/BoxName" index="0"]
+text = "Golem"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Type" parent="Background/Type" index="0"]
+text = "Ataque"
+
+[node name="Rarity" parent="Background/BoxDescription" index="0"]
+texture = ExtResource("4_v8rol")
+
+[node name="Description" parent="Background/BoxDescription" index="1"]
+text = "Ataca"

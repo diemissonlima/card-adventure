@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://085fq2oopgfn"]
+
+[ext_resource type="PackedScene" uid="uid://bjekvwsvl0b1h" path="res://scenes/cards/card_base.tscn" id="1_vmf6x"]
+[ext_resource type="Texture2D" uid="uid://7srifpev2ue2" path="res://assets/Card Sprites/Minion/Alternate (2).png" id="2_5cci1"]
+[ext_resource type="Texture2D" uid="uid://wjj3dk433ne2" path="res://assets/1.png" id="3_l27c8"]
+[ext_resource type="Texture2D" uid="uid://cnb511x6opq0" path="res://assets/Card Sprites/_Rarity/rarity (1).png" id="4_jvdxq"]
+
+[node name="Defesa1" instance=ExtResource("1_vmf6x")]
+
+[node name="Background" parent="." index="0"]
+texture = ExtResource("2_5cci1")
+
+[node name="Cost" parent="Background/Cost" index="0"]
+text = "1"
+
+[node name="Sprite" parent="Background/CardBg" index="0"]
+texture = ExtResource("3_l27c8")
+
+[node name="Name" parent="Background/BoxName" index="0"]
+text = "Golem"
+
+[node name="Type" parent="Background/Type" index="0"]
+text = "Defesa"
+
+[node name="Rarity" parent="Background/BoxDescription" index="0"]
+texture = ExtResource("4_jvdxq")
+
+[node name="Description" parent="Background/BoxDescription" index="1"]
+text = "Defende"
