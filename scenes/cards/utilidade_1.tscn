@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bjekvwsvl0b1h" path="res://scenes/cards/card_base.tscn" id="1_i2uh1"]
 [ext_resource type="Texture2D" uid="uid://wqqma8eb720y" path="res://assets/Card Sprites/Minion/Alternate (1).png" id="2_d573p"]
-[ext_resource type="Texture2D" uid="uid://wjj3dk433ne2" path="res://assets/1.png" id="3_1t5bq"]
+[ext_resource type="Texture2D" uid="uid://byxalfwtbesqh" path="res://assets/Card Sprites/images/potionGreen.png" id="3_dk7qc"]
 [ext_resource type="Texture2D" uid="uid://cnb511x6opq0" path="res://assets/Card Sprites/_Rarity/rarity (1).png" id="4_v8480"]
 
 [node name="Utilidade1" instance=ExtResource("1_i2uh1")]
@@ -13,11 +13,11 @@ texture = ExtResource("2_d573p")
 [node name="Cost" parent="Background/Cost" index="0"]
 text = "1"
 
-[node name="Sprite" parent="Background/CardBg" index="0"]
-texture = ExtResource("3_1t5bq")
+[node name="Sprite" parent="Background" index="2"]
+texture = ExtResource("3_dk7qc")
 
 [node name="Name" parent="Background/BoxName" index="0"]
-text = "Golem"
+text = "Potion"
 
 [node name="Type" parent="Background/Type" index="0"]
 text = "Utilidade"

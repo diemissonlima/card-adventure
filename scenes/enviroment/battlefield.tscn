@@ -1,0 +1,75 @@
+[gd_scene load_steps=5 format=3 uid="uid://cgsdisnwd5sk3"]
+
+[ext_resource type="Texture2D" uid="uid://b7p3osscw3jol" path="res://assets/Environment/17.png" id="1_xduve"]
+[ext_resource type="Script" path="res://scripts/battlefield.gd" id="1_yqoyk"]
+[ext_resource type="PackedScene" uid="uid://b5iw5jg31baab" path="res://scenes/enemies/base_enemy.tscn" id="2_jx5xc"]
+[ext_resource type="PackedScene" uid="uid://b82hcmn5etb15" path="res://scenes/cards/ataque_1.tscn" id="4_kcw1o"]
+
+[node name="Battlefield" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_yqoyk")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_xduve")
+
+[node name="Enemies" type="Node2D" parent="Background"]
+position = Vector2(0, -64)
+
+[node name="Enemy1" type="Marker2D" parent="Background/Enemies"]
+position = Vector2(576, 276)
+
+[node name="BaseEnemy" parent="Background/Enemies/Enemy1" instance=ExtResource("2_jx5xc")]
+
+[node name="Enemy2" type="Marker2D" parent="Background/Enemies"]
+position = Vector2(926, 351)
+
+[node name="BaseEnemy" parent="Background/Enemies/Enemy2" instance=ExtResource("2_jx5xc")]
+
+[node name="Enemy3" type="Marker2D" parent="Background/Enemies"]
+position = Vector2(226, 351)
+
+[node name="BaseEnemy" parent="Background/Enemies/Enemy3" instance=ExtResource("2_jx5xc")]
+
+[node name="PlayerHand" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(450, 40)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -430.0
+offset_top = -185.0
+offset_right = 430.0
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = -10
+alignment = 1
+
+[node name="Ataque1" parent="PlayerHand" instance=ExtResource("4_kcw1o")]
+layout_mode = 2
+
+[node name="Ataque2" parent="PlayerHand" instance=ExtResource("4_kcw1o")]
+layout_mode = 2
+
+[node name="Ataque3" parent="PlayerHand" instance=ExtResource("4_kcw1o")]
+layout_mode = 2
+
+[node name="Ataque4" parent="PlayerHand" instance=ExtResource("4_kcw1o")]
+layout_mode = 2
+
+[node name="Ataque5" parent="PlayerHand" instance=ExtResource("4_kcw1o")]
+layout_mode = 2

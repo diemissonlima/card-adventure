@@ -1,0 +1,14 @@
+[gd_scene load_steps=6 format=3 uid="uid://5wkrskl1xh3u"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_674un"]
+[ext_resource type="PackedScene" uid="uid://b82hcmn5etb15" path="res://scenes/cards/ataque_1.tscn" id="2_wkywj"]
+[ext_resource type="PackedScene" uid="uid://bxw4qw086pg3x" path="res://scenes/cards/ataque_2.tscn" id="3_7iaf1"]
+[ext_resource type="PackedScene" uid="uid://085fq2oopgfn" path="res://scenes/cards/defesa_1.tscn" id="4_yh6xn"]
+[ext_resource type="PackedScene" uid="uid://d0kx5nbit6m0k" path="res://scenes/cards/utilidade_1.tscn" id="5_5mgol"]
+
+[node name="Player" type="Node2D"]
+script = ExtResource("1_674un")
+max_health = 150
+health = 150
+damage = 15
+deck_list = Array[PackedScene]([ExtResource("2_wkywj"), ExtResource("2_wkywj"), ExtResource("2_wkywj"), ExtResource("3_7iaf1"), ExtResource("4_yh6xn"), ExtResource("4_yh6xn"), ExtResource("4_yh6xn"), ExtResource("5_5mgol")])

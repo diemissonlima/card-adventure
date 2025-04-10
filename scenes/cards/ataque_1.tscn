@@ -2,24 +2,32 @@
 
 [ext_resource type="PackedScene" uid="uid://bjekvwsvl0b1h" path="res://scenes/cards/card_base.tscn" id="1_b3av0"]
 [ext_resource type="Texture2D" uid="uid://biktkbg7nnsp5" path="res://assets/Card Sprites/Minion/Alternate (3).png" id="2_odeio"]
-[ext_resource type="Texture2D" uid="uid://wjj3dk433ne2" path="res://assets/1.png" id="3_6ueas"]
+[ext_resource type="Texture2D" uid="uid://br2f0nihrdnvf" path="res://assets/Card Sprites/images/sword1.png" id="3_c162c"]
 [ext_resource type="Texture2D" uid="uid://cnb511x6opq0" path="res://assets/Card Sprites/_Rarity/rarity (1).png" id="4_v8rol"]
 
 [node name="Ataque1" instance=ExtResource("1_b3av0")]
+custom_minimum_size = Vector2(180, 230)
 
 [node name="Background" parent="." index="0"]
+custom_minimum_size = Vector2(180, 230)
 texture = ExtResource("2_odeio")
 
 [node name="Cost" parent="Background/Cost" index="0"]
 text = "1"
 
-[node name="Sprite" parent="Background/CardBg" index="0"]
-texture = ExtResource("3_6ueas")
+[node name="Sprite" parent="Background" index="2"]
+offset_left = -79.0
+offset_top = -101.0
+offset_right = 73.0
+offset_bottom = 31.0
+texture = ExtResource("3_c162c")
 
 [node name="Name" parent="Background/BoxName" index="0"]
-text = "Golem"
-horizontal_alignment = 1
-vertical_alignment = 1
+offset_left = -26.0
+offset_top = -15.5
+offset_right = 30.0
+offset_bottom = 1.5
+text = "Sword"
 
 [node name="Type" parent="Background/Type" index="0"]
 text = "Ataque"

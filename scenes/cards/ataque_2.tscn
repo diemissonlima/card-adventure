@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bjekvwsvl0b1h" path="res://scenes/cards/card_base.tscn" id="1_gk5e3"]
 [ext_resource type="Texture2D" uid="uid://biktkbg7nnsp5" path="res://assets/Card Sprites/Minion/Alternate (3).png" id="2_ge78t"]
-[ext_resource type="Texture2D" uid="uid://wjj3dk433ne2" path="res://assets/1.png" id="3_26jhx"]
+[ext_resource type="Texture2D" uid="uid://dum7t1y0br321" path="res://assets/Card Sprites/images/sword2.png" id="3_sm4oy"]
 [ext_resource type="Texture2D" uid="uid://cnb511x6opq0" path="res://assets/Card Sprites/_Rarity/rarity (1).png" id="4_jggya"]
 
 [node name="Ataque2" instance=ExtResource("1_gk5e3")]
@@ -13,11 +13,15 @@ texture = ExtResource("2_ge78t")
 [node name="Cost" parent="Background/Cost" index="0"]
 text = "2"
 
-[node name="Sprite" parent="Background/CardBg" index="0"]
-texture = ExtResource("3_26jhx")
+[node name="Sprite" parent="Background" index="1"]
+texture = ExtResource("3_sm4oy")
 
 [node name="Name" parent="Background/BoxName" index="0"]
-text = "Golem"
+offset_left = -26.0
+offset_top = -15.5
+offset_right = 30.0
+offset_bottom = 1.5
+text = "Sword"
 
 [node name="Type" parent="Background/Type" index="0"]
 text = "Ataque"
