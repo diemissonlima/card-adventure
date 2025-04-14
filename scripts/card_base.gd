@@ -6,7 +6,7 @@ class_name CardBase
 @export var card_cost: int
 @export var card_value: int
 @export var times_used: int
-@export_enum("attack", "defense", "buff", "debuff") var card_type: String
+@export_enum("attack", "defense", "technique") var card_type: String
 @export_enum("null", "block", "poison", "paralyzed", "bleed") var status_type: String
 
 var can_click: bool = false

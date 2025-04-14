@@ -33,10 +33,7 @@ func get_card_in_use(card: Control) -> void:
 		"defense":
 			perform_action_card(card, player)
 		
-		"buff":
-			perform_action_card(card, player)
-			
-		"debuff":
+		"technique":
 			if target_enemy != null:
 				perform_action_card(card, target_enemy)
 			else:
@@ -46,9 +43,10 @@ func get_card_in_use(card: Control) -> void:
 func perform_action_card(card, target) -> void:
 	if target is BaseEnemy:
 		if card.card_type == "attack":
-			target.take_damage(card.card_value, card.times_used)
+			var damage: int = player.damage + card.card_value
+			target.take_damage(damage, card.times_used)
 			
-		elif card.card_type == "debuff":
+		elif card.card_type == "technique":
 			target.apply_status(card.status_type)
 			
 	elif target is Player:
@@ -66,3 +64,15 @@ func on_mouse_area_entered(enemy) -> void:
 
 func on_mouse_exited() -> void:
 	can_click = false
+
+
+func _on_end_turn_pressed() -> void:
+	for enemy in get_tree().get_nodes_in_group("enemy"):
+		player.take_damage(enemy.damage)
+	
+	for card in $Background/Player/PlayerHand.get_children():
+		card.queue_free()
+	
+	$Background/Player/PlayerHand.draw_card(4)
+	player.actions = 4
+	player.update_bar()

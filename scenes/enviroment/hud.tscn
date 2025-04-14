@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cp13lbvmsx8ob"]
+[gd_scene load_steps=16 format=3 uid="uid://cp13lbvmsx8ob"]
 
 [ext_resource type="Texture2D" uid="uid://diewhd2puo7v4" path="res://assets/Environment/player/BqBar.png" id="1_x0pe6"]
 [ext_resource type="Texture2D" uid="uid://cj4y5xpvhwuwq" path="res://assets/Environment/player/Border.png" id="2_h4hwc"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://bl4fhsvbs60mx" path="res://assets/Environment/player/paladin minion.png" id="6_c7jwg"]
 [ext_resource type="Texture2D" uid="uid://b3r1ekn3aeoif" path="res://assets/Environment/player/AvatarCircle.png" id="7_mbqr3"]
 [ext_resource type="Texture2D" uid="uid://wrwd11qyuvhl" path="res://assets/Environment/player/Overlay Border.png" id="8_hr57s"]
+[ext_resource type="Texture2D" uid="uid://6ltvyw8kx2j" path="res://assets/Environment/status_icon/attack.png" id="10_uwcal"]
+[ext_resource type="Texture2D" uid="uid://chjwcd54a8g33" path="res://assets/Environment/status_icon/defense.png" id="11_p27hf"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_18cba"]
 font = ExtResource("4_08uok")
@@ -28,7 +30,8 @@ shader = ExtResource("6_7f3ue")
 [sub_resource type="LabelSettings" id="LabelSettings_dynov"]
 line_spacing = 0.0
 font = ExtResource("4_08uok")
-outline_size = 4
+font_size = 18
+outline_size = 5
 outline_color = Color(0, 0, 0, 1)
 
 [node name="HUD" type="CanvasLayer"]
@@ -151,24 +154,57 @@ layout_mode = 2
 expand_mode = 1
 
 [node name="Attack-Defense" type="HBoxContainer" parent="."]
-custom_minimum_size = Vector2(150, 17)
 offset_left = 24.0
-offset_top = 152.0
-offset_right = 174.0
-offset_bottom = 169.0
-theme_override_constants/separation = 10
+offset_top = 117.0
+offset_right = 159.0
+offset_bottom = 147.0
+theme_override_constants/separation = 75
 alignment = 1
 
-[node name="Attack" type="Label" parent="Attack-Defense"]
+[node name="AttackIcon" type="TextureRect" parent="Attack-Defense"]
+custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
-text = "Atk 1500"
+texture = ExtResource("10_uwcal")
+expand_mode = 1
+
+[node name="Attack" type="Label" parent="Attack-Defense/AttackIcon"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -14.5
+offset_top = 2.0
+offset_right = 14.5
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "1500"
 label_settings = SubResource("LabelSettings_dynov")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Defense" type="Label" parent="Attack-Defense"]
+[node name="DefenseIcon" type="TextureRect" parent="Attack-Defense"]
+custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
-text = "Def 1000"
+texture = ExtResource("11_p27hf")
+expand_mode = 1
+
+[node name="Defense" type="Label" parent="Attack-Defense/DefenseIcon"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -14.5
+offset_top = 2.0
+offset_right = 14.5
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "1500"
 label_settings = SubResource("LabelSettings_dynov")
 horizontal_alignment = 1
 vertical_alignment = 1

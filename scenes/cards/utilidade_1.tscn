@@ -9,7 +9,7 @@
 card_name = "utilidade 1"
 card_cost = 1
 times_used = 1
-card_type = "debuff"
+card_type = "technique"
 status_type = "poison"
 
 [node name="Background" parent="." index="0"]
@@ -28,11 +28,9 @@ texture = ExtResource("3_dk7qc")
 text = "Potion"
 
 [node name="Type" parent="Background/Type" index="0"]
-offset_left = -22.0
-offset_top = -6.5
-offset_right = 22.0
-offset_bottom = 6.5
-text = "Debuff"
+text = "Técnica"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Rarity" parent="Background/BoxDescription" index="0"]
 texture = ExtResource("4_v8480")

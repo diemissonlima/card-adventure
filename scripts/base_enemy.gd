@@ -36,6 +36,7 @@ func update_bar() -> void:
 # recebe o dano do player
 func take_damage(damage: int, times_used: int) -> void:
 	var new_damage: int = damage * times_used
+	
 	health -= new_damage
 	animation.play("hit")
 	
@@ -47,21 +48,24 @@ func take_damage(damage: int, times_used: int) -> void:
 
 
 func apply_status(type: String) -> void:
-	var target = null
-	
-	for status in modifiers_container.get_children():
-		if status.texture == null:
-			target = status
-			break
-	
-	match type:
-		"poison":
-			target.texture = load("res://assets/Environment/status_icon/poison.png")
-			target.show()
+	var status_quantity: int = $Modifiers.get_child_count()
+	if status_quantity <= 0:
+		var status_instance
+		match type:
+			"poison":
+				status_instance = preload("res://scenes/status/poison.tscn")
+			
+			"paralyzed":
+				status_instance = preload("res://scenes/status/poison.tscn")
 		
-		"paralyzed":
-			target.texture = load("res://assets/Environment/status_icon/paralysis.png")
-			target.show()
+		var status_scene = status_instance.instantiate()
+		$Modifiers.add_child(status_scene)
+		return
+	
+	for status in $Modifiers.get_children():
+		if status.status_name == type:
+			status.update_durability("increase")
+			break
 
 
 # método de morte

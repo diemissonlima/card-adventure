@@ -8,7 +8,7 @@
 [node name="Ataque2" instance=ExtResource("1_gk5e3")]
 card_name = "ataque 2"
 card_cost = 2
-card_value = 7
+card_value = 5
 times_used = 2
 card_type = "attack"
 status_type = "null"
@@ -40,5 +40,5 @@ text = "Ataque"
 texture = ExtResource("4_jggya")
 
 [node name="Description" parent="Background/BoxDescription" index="1"]
-text = "Cause 7 de dano 2x
+text = "Cause 5 de dano 2x
 Fúria +1"

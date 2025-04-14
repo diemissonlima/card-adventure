@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://b5iw5jg31baab"]
+[gd_scene load_steps=18 format=3 uid="uid://b5iw5jg31baab"]
 
 [ext_resource type="Script" path="res://scripts/base_enemy.gd" id="1_ekd5x"]
 [ext_resource type="Texture2D" uid="uid://diewhd2puo7v4" path="res://assets/Environment/player/BqBar.png" id="2_25rev"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://bqm55gbkelbia" path="res://assets/Environment/player/BarHealth.png" id="4_5cwg6"]
 [ext_resource type="Texture2D" uid="uid://d0rtrp4hpvo2d" path="res://assets/enemies/1/3.png" id="5_smeca"]
 [ext_resource type="Texture2D" uid="uid://u0qrberc2wwv" path="res://assets/enemies/1/4.png" id="6_cp3q1"]
-[ext_resource type="Texture2D" uid="uid://c0h3j3ge7ggq0" path="res://assets/Environment/status_icon/block.png" id="10_de0uo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uy244"]
 
@@ -181,35 +180,5 @@ offset_right = 81.6667
 offset_bottom = -68.0
 theme_override_constants/separation = 10
 alignment = 1
-
-[node name="Modifier1" type="TextureRect" parent="Modifiers"]
-custom_minimum_size = Vector2(20, 20)
-layout_mode = 2
-texture = ExtResource("10_de0uo")
-expand_mode = 1
-
-[node name="Modifier2" type="TextureRect" parent="Modifiers"]
-visible = false
-custom_minimum_size = Vector2(20, 20)
-layout_mode = 2
-expand_mode = 1
-
-[node name="Modifier3" type="TextureRect" parent="Modifiers"]
-visible = false
-custom_minimum_size = Vector2(20, 20)
-layout_mode = 2
-expand_mode = 1
-
-[node name="Modifier4" type="TextureRect" parent="Modifiers"]
-visible = false
-custom_minimum_size = Vector2(20, 20)
-layout_mode = 2
-expand_mode = 1
-
-[node name="Modifier5" type="TextureRect" parent="Modifiers"]
-visible = false
-custom_minimum_size = Vector2(20, 20)
-layout_mode = 2
-expand_mode = 1
 
 [connection signal="animation_finished" from="AuxAnimation" to="." method="_on_aux_animation_animation_finished"]

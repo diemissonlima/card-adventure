@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvs1cw3lc4bhp"]
+
+[ext_resource type="PackedScene" uid="uid://t88u65mpnlst" path="res://scenes/status/base_status.tscn" id="1_10wki"]
+
+[node name="Poison" instance=ExtResource("1_10wki")]
+status_name = "poison"
+status_description = "Dano de Veneno"
+
+[node name="Durability" parent="." index="0"]
+offset_left = -14.0
+offset_top = -34.0
+offset_bottom = -20.0
+text = "1"

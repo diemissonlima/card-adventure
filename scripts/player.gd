@@ -12,7 +12,6 @@ class_name Player
 
 @export_category("Variaveis Deck")
 @export var deck_list: Array[PackedScene]
-@export var hand_limit: int = 4
 
 @export_category("Objetos")
 @export var hud: CanvasLayer
@@ -27,6 +26,7 @@ var defense_label = null
 func _ready() -> void:
 	init_bar()
 	init_label()
+	send_deck_to_battlefield()
 
 
 func init_bar() -> void:
@@ -44,11 +44,11 @@ func init_bar() -> void:
 
 func init_label() -> void:
 	info_container = hud.get_node("Attack-Defense")
-	attack_label = info_container.get_node("Attack")
-	defense_label = info_container.get_node("Defense")
+	attack_label = info_container.get_node("AttackIcon/Attack")
+	defense_label = info_container.get_node("DefenseIcon/Defense")
 	
-	attack_label.text = "Atk " + str(damage)
-	defense_label.text = "Def " + str(defense)
+	attack_label.text = str(damage)
+	defense_label.text = str(defense)
 
 
 func update_bar() -> void:
@@ -62,6 +62,11 @@ func update_bar() -> void:
 func update_label() -> void:
 	attack_label.text = "Atk " + str(damage)
 	defense_label.text = "Def " + str(defense)
+
+
+func send_deck_to_battlefield() -> void:
+	var deck: Array = deck_list.duplicate()
+	get_tree().call_group("player_hand", "get_player_deck", deck)
 
 
 func take_damage(damage: int) -> void:

@@ -1,6 +1,9 @@
 Label
-HBoxContainer
+ColorRect
+Timer
+Button
 TextureRect
+HBoxContainer
 AnimationPlayer
 CollisionShape2D
 Area2D
@@ -9,6 +12,3 @@ CanvasLayer
 Control
 Marker2D
 Node2D
-AnimatedSprite2D
-Node
-ProgressBar
