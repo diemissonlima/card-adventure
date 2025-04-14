@@ -1,0 +1,14 @@
+res://scenes/cards/card_base.tscn
+res://scenes/cards/card_base.gdshader
+res://scenes/enviroment/hud.gdshader
+res://scenes/enviroment/battlefield.tscn
+res://scenes/enemies/base_enemy.tscn
+res://scenes/enviroment/player.tscn
+res://scenes/enviroment/hud.tscn
+res://scenes/cards/utilidade_1.tscn
+res://scenes/cards/defesa_1.tscn
+res://scenes/cards/ataque_1.tscn
+res://scenes/cards/ataque_2.tscn
+res://scripts/card_base.gd
+res://scripts/base_enemy.gd
+res://scripts/battlefield.gd

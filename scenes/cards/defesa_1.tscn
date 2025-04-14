@@ -6,12 +6,22 @@
 [ext_resource type="Texture2D" uid="uid://cnb511x6opq0" path="res://assets/Card Sprites/_Rarity/rarity (1).png" id="4_jvdxq"]
 
 [node name="Defesa1" instance=ExtResource("1_vmf6x")]
+card_name = "defesa 1"
+card_cost = 1
+card_value = 5
+times_used = 1
+card_type = "defense"
+status_type = "block"
 
 [node name="Background" parent="." index="0"]
 texture = ExtResource("2_5cci1")
 
 [node name="Cost" parent="Background/Cost" index="0"]
 text = "1"
+
+[node name="CardBg" parent="Background" index="1"]
+offset_left = -74.0
+offset_right = 76.0
 
 [node name="Sprite" parent="Background" index="2"]
 texture = ExtResource("3_145ag")
@@ -26,4 +36,4 @@ text = "Defesa"
 texture = ExtResource("4_jvdxq")
 
 [node name="Description" parent="Background/BoxDescription" index="1"]
-text = "Defende"
+text = "Ganhe 5 de defesa"

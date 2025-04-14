@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cv0qmtyeuvd3o"
-path="res://.godot/imported/debuff icon.png-d8d92d2e3d26df6722bc7f00f9efdf4a.ctex"
+uid="uid://b3r1ekn3aeoif"
+path="res://.godot/imported/AvatarCircle.png-3b6838f31e08d5cf18e741aaab455aaa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Environment/status_icon/debuff icon.png"
-dest_files=["res://.godot/imported/debuff icon.png-d8d92d2e3d26df6722bc7f00f9efdf4a.ctex"]
+source_file="res://assets/Environment/player/AvatarCircle.png"
+dest_files=["res://.godot/imported/AvatarCircle.png-3b6838f31e08d5cf18e741aaab455aaa.ctex"]
 
 [params]
 

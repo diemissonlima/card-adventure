@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djpwx78i5abut"
-path="res://.godot/imported/buff icon.png-fca39aeabec9efa34ef74c4cdd8dd69b.ctex"
+uid="uid://bpy7bw2ewcw42"
+path="res://.godot/imported/BarMana.png-4f6ab48bf0631b12df5343aa9268702d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Environment/status_icon/buff icon.png"
-dest_files=["res://.godot/imported/buff icon.png-fca39aeabec9efa34ef74c4cdd8dd69b.ctex"]
+source_file="res://assets/Environment/player/BarMana.png"
+dest_files=["res://.godot/imported/BarMana.png-4f6ab48bf0631b12df5343aa9268702d.ctex"]
 
 [params]
 

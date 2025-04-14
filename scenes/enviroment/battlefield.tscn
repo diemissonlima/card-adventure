@@ -1,11 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://cgsdisnwd5sk3"]
+[gd_scene load_steps=10 format=3 uid="uid://cgsdisnwd5sk3"]
 
-[ext_resource type="Texture2D" uid="uid://b7p3osscw3jol" path="res://assets/Environment/17.png" id="1_xduve"]
 [ext_resource type="Script" path="res://scripts/battlefield.gd" id="1_yqoyk"]
 [ext_resource type="PackedScene" uid="uid://b5iw5jg31baab" path="res://scenes/enemies/base_enemy.tscn" id="2_jx5xc"]
+[ext_resource type="Texture2D" uid="uid://ygsbnbykkuwe" path="res://assets/Environment/2.png" id="3_unkll"]
+[ext_resource type="PackedScene" uid="uid://5wkrskl1xh3u" path="res://scenes/enviroment/player.tscn" id="4_ge5ri"]
 [ext_resource type="PackedScene" uid="uid://b82hcmn5etb15" path="res://scenes/cards/ataque_1.tscn" id="4_kcw1o"]
+[ext_resource type="PackedScene" uid="uid://cp13lbvmsx8ob" path="res://scenes/enviroment/hud.tscn" id="5_jn76p"]
+[ext_resource type="PackedScene" uid="uid://085fq2oopgfn" path="res://scenes/cards/defesa_1.tscn" id="6_vmcdi"]
+[ext_resource type="PackedScene" uid="uid://d0kx5nbit6m0k" path="res://scenes/cards/utilidade_1.tscn" id="7_y6lnj"]
+[ext_resource type="PackedScene" uid="uid://bxw4qw086pg3x" path="res://scenes/cards/ataque_2.tscn" id="9_77iit"]
 
-[node name="Battlefield" type="Control"]
+[node name="Battlefield" type="Control" node_paths=PackedStringArray("player") groups=["battlefield"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,6 +19,9 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_yqoyk")
+player = NodePath("Background/Player")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("5_jn76p")]
 
 [node name="Background" type="TextureRect" parent="."]
 layout_mode = 1
@@ -22,10 +30,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_xduve")
+texture = ExtResource("3_unkll")
 
 [node name="Enemies" type="Node2D" parent="Background"]
-position = Vector2(0, -64)
+position = Vector2(0, -8)
 
 [node name="Enemy1" type="Marker2D" parent="Background/Enemies"]
 position = Vector2(576, 276)
@@ -42,34 +50,33 @@ position = Vector2(226, 351)
 
 [node name="BaseEnemy" parent="Background/Enemies/Enemy3" instance=ExtResource("2_jx5xc")]
 
-[node name="PlayerHand" type="HBoxContainer" parent="."]
+[node name="Player" parent="Background" node_paths=PackedStringArray("hud") instance=ExtResource("4_ge5ri")]
+hud = NodePath("../../CanvasLayer")
+
+[node name="PlayerHand" type="HBoxContainer" parent="Background/Player"]
 custom_minimum_size = Vector2(450, 40)
-layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -430.0
-offset_top = -185.0
-offset_right = 430.0
-offset_bottom = 45.0
+offset_left = 286.0
+offset_top = 444.0
+offset_right = 866.0
+offset_bottom = 674.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_constants/separation = -10
+theme_override_constants/separation = 20
 alignment = 1
 
-[node name="Ataque1" parent="PlayerHand" instance=ExtResource("4_kcw1o")]
+[node name="Ataque1" parent="Background/Player/PlayerHand" instance=ExtResource("4_kcw1o")]
 layout_mode = 2
 
-[node name="Ataque2" parent="PlayerHand" instance=ExtResource("4_kcw1o")]
+[node name="Defesa1" parent="Background/Player/PlayerHand" instance=ExtResource("6_vmcdi")]
 layout_mode = 2
 
-[node name="Ataque3" parent="PlayerHand" instance=ExtResource("4_kcw1o")]
+[node name="Utilidade1" parent="Background/Player/PlayerHand" instance=ExtResource("7_y6lnj")]
 layout_mode = 2
 
-[node name="Ataque4" parent="PlayerHand" instance=ExtResource("4_kcw1o")]
-layout_mode = 2
-
-[node name="Ataque5" parent="PlayerHand" instance=ExtResource("4_kcw1o")]
+[node name="Ataque2" parent="Background/Player/PlayerHand" instance=ExtResource("9_77iit")]
 layout_mode = 2

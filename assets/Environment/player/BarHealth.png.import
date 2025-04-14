@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckhblkg2v2vil"
-path="res://.godot/imported/paralysis icon.png-ee5fff232d09b3c445f3ea724d596c24.ctex"
+uid="uid://bqm55gbkelbia"
+path="res://.godot/imported/BarHealth.png-cfe6bf6f4f23d6bbad66455cff61a5fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Environment/status_icon/paralysis icon.png"
-dest_files=["res://.godot/imported/paralysis icon.png-ee5fff232d09b3c445f3ea724d596c24.ctex"]
+source_file="res://assets/Environment/player/BarHealth.png"
+dest_files=["res://.godot/imported/BarHealth.png-cfe6bf6f4f23d6bbad66455cff61a5fc.ctex"]
 
 [params]
 

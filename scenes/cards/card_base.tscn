@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://bjekvwsvl0b1h"]
+[gd_scene load_steps=16 format=3 uid="uid://bjekvwsvl0b1h"]
 
 [ext_resource type="Texture2D" uid="uid://r6w31d608bf3" path="res://assets/Card Sprites/Minion/minion (1).png" id="1_27dmq"]
+[ext_resource type="Script" path="res://scripts/card_base.gd" id="1_y5r1s"]
 [ext_resource type="Texture2D" uid="uid://bt5eyb6ngcxic" path="res://assets/Card Sprites/Minion/minion (5).png" id="2_0ircm"]
 [ext_resource type="Texture2D" uid="uid://crj4co0h4s6wb" path="res://assets/Card Sprites/Minion/minion (7).png" id="2_ng1q8"]
 [ext_resource type="FontFile" uid="uid://cbvsmohw8mlwd" path="res://assets/font/njo_14.ttf" id="3_sev07"]
@@ -37,6 +38,9 @@ font_size = 12
 outline_size = 4
 outline_color = Color(0, 0, 0, 1)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iyeym"]
+size = Vector2(167.778, 236.667)
+
 [node name="CardBase" type="Control"]
 custom_minimum_size = Vector2(180, 230)
 layout_mode = 3
@@ -50,6 +54,8 @@ offset_bottom = -533.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.9, 0.9)
+mouse_filter = 2
+script = ExtResource("1_y5r1s")
 
 [node name="Background" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(180, 230)
@@ -83,9 +89,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -3.0
-offset_top = -18.5
+offset_top = -16.2778
 offset_right = 3.0
-offset_bottom = -1.5
+offset_bottom = 0.722229
 grow_horizontal = 2
 grow_vertical = 2
 label_settings = SubResource("LabelSettings_u6666")
@@ -99,9 +105,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -79.0
+offset_left = -76.0
 offset_top = -102.0
-offset_right = 80.0
+offset_right = 77.0
 offset_bottom = 36.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -227,3 +233,13 @@ label_settings = SubResource("LabelSettings_e2in4")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+
+[node name="Area" type="Area2D" parent="."]
+show_behind_parent = true
+
+[node name="Collision" type="CollisionShape2D" parent="Area"]
+position = Vector2(89.4445, 103.889)
+shape = SubResource("RectangleShape2D_iyeym")
+
+[connection signal="mouse_entered" from="Area" to="." method="_on_area_mouse_entered"]
+[connection signal="mouse_exited" from="Area" to="." method="_on_area_mouse_exited"]
