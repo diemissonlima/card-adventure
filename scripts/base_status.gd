@@ -11,6 +11,10 @@ class_name BaseStatus
 @export var durability_label: Label
 
 
+func _ready() -> void:
+	durability_label.text = str(status_durability)
+
+
 func update_durability(type: String) -> void:
 	match type:
 		"increase":

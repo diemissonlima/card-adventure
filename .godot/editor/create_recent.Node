@@ -1,8 +1,9 @@
+TextureRect
+Sprite2D
 Label
 ColorRect
 Timer
 Button
-TextureRect
 HBoxContainer
 AnimationPlayer
 CollisionShape2D
@@ -11,4 +12,3 @@ TextureProgressBar
 CanvasLayer
 Control
 Marker2D
-Node2D

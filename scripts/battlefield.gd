@@ -5,10 +5,16 @@ var can_click: bool = false
 var target_enemy = null
 
 @export var player: Node2D
-
+@export var deck_size: Label
+@export var discard_pile_size: Label
 
 func _ready() -> void:
 	connect_enemy_signal()
+
+
+func _process(_delta: float) -> void:
+	deck_size.text = str($Background/Player/PlayerHand.player_deck.size())
+	discard_pile_size.text = str($Background/Player/PlayerHand.discard_pile.size())
 
 
 func connect_enemy_signal() -> void:
@@ -54,9 +60,10 @@ func perform_action_card(card, target) -> void:
 			player.apply_status(card.status_type)
 	
 	player.spend_energy(card.card_cost)
+	$Background/Player/PlayerHand.discard_pile.append(card)
 	card.queue_free()
-
-
+	
+	
 func on_mouse_area_entered(enemy) -> void:
 	can_click = true
 	target_enemy = enemy
@@ -68,11 +75,32 @@ func on_mouse_exited() -> void:
 
 func _on_end_turn_pressed() -> void:
 	for enemy in get_tree().get_nodes_in_group("enemy"):
+		apply_status_effect(enemy)
+		decrease_status_enemy(enemy)
 		player.take_damage(enemy.damage)
 	
 	for card in $Background/Player/PlayerHand.get_children():
+		$Background/Player/PlayerHand.discard_pile.append(card)
 		card.queue_free()
 	
 	$Background/Player/PlayerHand.draw_card(4)
 	player.actions = 4
 	player.update_bar()
+
+
+func decrease_status_enemy(enemy) -> void:
+	var enemy_modifier = enemy.get_node("Modifiers")
+	
+	if enemy_modifier.get_child_count() > 0:
+		for status in enemy_modifier.get_children():
+			status.update_durability("decrease")
+
+
+func apply_status_effect(enemy) -> void:
+	var enemy_modifier = enemy.get_node("Modifiers")
+	
+	if enemy_modifier.get_child_count() > 0:
+		for status in enemy_modifier.get_children():
+			match status.status_name:
+				"poison":
+					enemy.take_damage(15, 1)

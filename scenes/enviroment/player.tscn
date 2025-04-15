@@ -14,4 +14,4 @@ damage = 3
 defense = 1
 max_actions = 4
 actions = 4
-deck_list = Array[PackedScene]([ExtResource("2_wkywj"), ExtResource("2_wkywj"), ExtResource("2_wkywj"), ExtResource("3_7iaf1"), ExtResource("4_yh6xn"), ExtResource("4_yh6xn"), ExtResource("4_yh6xn"), ExtResource("5_5mgol")])
+deck_list = Array[PackedScene]([ExtResource("2_wkywj"), ExtResource("2_wkywj"), ExtResource("2_wkywj"), ExtResource("3_7iaf1"), ExtResource("4_yh6xn"), ExtResource("4_yh6xn"), ExtResource("5_5mgol")])

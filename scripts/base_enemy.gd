@@ -38,7 +38,7 @@ func take_damage(damage: int, times_used: int) -> void:
 	var new_damage: int = damage * times_used
 	
 	health -= new_damage
-	animation.play("hit")
+	play_animation("hit")
 	
 	if health <= 0:
 		health = 0
@@ -70,7 +70,7 @@ func apply_status(type: String) -> void:
 
 # método de morte
 func kill() -> void:
-	animation.play("death")
+	play_animation("death")
 
 
 func get_enemy_name() -> void:
@@ -79,6 +79,10 @@ func get_enemy_name() -> void:
 	]
 	var index: int = randi() % name_list.size()
 	enemy_name = name_list[index]
+
+
+func play_animation(anim_name: String) -> void:
+	animation.play(anim_name)
 
 
 func _on_aux_animation_animation_finished(anim_name: StringName) -> void:

@@ -8,7 +8,7 @@
 [ext_resource type="Script" path="res://scripts/player_hand.gd" id="6_dyhce"]
 [ext_resource type="FontFile" uid="uid://cbvsmohw8mlwd" path="res://assets/font/njo_14.ttf" id="10_5042g"]
 
-[node name="Battlefield" type="Control" node_paths=PackedStringArray("player") groups=["battlefield"]]
+[node name="Battlefield" type="Control" node_paths=PackedStringArray("player", "deck_size", "discard_pile_size") groups=["battlefield"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -18,6 +18,8 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_yqoyk")
 player = NodePath("Background/Player")
+deck_size = NodePath("Background/Player/Deck/Label")
+discard_pile_size = NodePath("Background/Player/Descarte/Label")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("5_jn76p")]
 
