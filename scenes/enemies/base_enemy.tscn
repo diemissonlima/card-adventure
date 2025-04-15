@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://j4nkhxvbodf4" path="res://assets/enemies/1/1.png" id="3_6tl23"]
 [ext_resource type="Texture2D" uid="uid://cj4y5xpvhwuwq" path="res://assets/Environment/player/Border.png" id="3_7gjvj"]
 [ext_resource type="Texture2D" uid="uid://b5sw7tki2sa72" path="res://assets/enemies/1/2.png" id="4_3on6j"]
-[ext_resource type="Texture2D" uid="uid://bqm55gbkelbia" path="res://assets/Environment/player/BarHealth.png" id="4_5cwg6"]
+[ext_resource type="Texture2D" uid="uid://bv5nstha4sxev" path="res://assets/Environment/player/ProgressBar04.png" id="4_pxtcc"]
 [ext_resource type="Texture2D" uid="uid://d0rtrp4hpvo2d" path="res://assets/enemies/1/3.png" id="5_smeca"]
 [ext_resource type="Texture2D" uid="uid://u0qrberc2wwv" path="res://assets/enemies/1/4.png" id="6_cp3q1"]
 
@@ -142,7 +142,7 @@ value = 50.0
 nine_patch_stretch = true
 texture_under = ExtResource("2_25rev")
 texture_over = ExtResource("3_7gjvj")
-texture_progress = ExtResource("4_5cwg6")
+texture_progress = ExtResource("4_pxtcc")
 
 [node name="Label" type="Label" parent="HealthBar"]
 layout_mode = 1
@@ -174,10 +174,11 @@ libraries = {
 }
 
 [node name="Modifiers" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(163, 20)
 offset_left = -81.3333
-offset_top = -88.0
+offset_top = -94.6666
 offset_right = 81.6667
-offset_bottom = -68.0
+offset_bottom = -74.6666
 theme_override_constants/separation = 10
 alignment = 1
 

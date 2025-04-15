@@ -2,15 +2,15 @@
 
 [ext_resource type="Texture2D" uid="uid://diewhd2puo7v4" path="res://assets/Environment/player/BqBar.png" id="1_x0pe6"]
 [ext_resource type="Texture2D" uid="uid://cj4y5xpvhwuwq" path="res://assets/Environment/player/Border.png" id="2_h4hwc"]
-[ext_resource type="Texture2D" uid="uid://bqm55gbkelbia" path="res://assets/Environment/player/BarHealth.png" id="3_uex37"]
+[ext_resource type="Texture2D" uid="uid://bv5nstha4sxev" path="res://assets/Environment/player/ProgressBar04.png" id="3_hgeo3"]
 [ext_resource type="FontFile" uid="uid://cbvsmohw8mlwd" path="res://assets/font/njo_14.ttf" id="4_08uok"]
-[ext_resource type="Texture2D" uid="uid://bpy7bw2ewcw42" path="res://assets/Environment/player/BarMana.png" id="5_2yci7"]
+[ext_resource type="Texture2D" uid="uid://cjwy53rckchoy" path="res://assets/Environment/player/ProgressBar03.png" id="5_o2apu"]
 [ext_resource type="Shader" path="res://scenes/enviroment/hud.gdshader" id="6_7f3ue"]
 [ext_resource type="Texture2D" uid="uid://bl4fhsvbs60mx" path="res://assets/Environment/player/paladin minion.png" id="6_c7jwg"]
 [ext_resource type="Texture2D" uid="uid://b3r1ekn3aeoif" path="res://assets/Environment/player/AvatarCircle.png" id="7_mbqr3"]
 [ext_resource type="Texture2D" uid="uid://wrwd11qyuvhl" path="res://assets/Environment/player/Overlay Border.png" id="8_hr57s"]
-[ext_resource type="Texture2D" uid="uid://6ltvyw8kx2j" path="res://assets/Environment/status_icon/attack.png" id="10_uwcal"]
-[ext_resource type="Texture2D" uid="uid://chjwcd54a8g33" path="res://assets/Environment/status_icon/defense.png" id="11_p27hf"]
+[ext_resource type="Texture2D" uid="uid://bpf478olk18er" path="res://assets/Environment/status_icon/ataque.png" id="10_h5vyb"]
+[ext_resource type="Texture2D" uid="uid://dtwcutqgc1njb" path="res://assets/Environment/status_icon/escudo.png" id="11_ryd7v"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_18cba"]
 font = ExtResource("4_08uok")
@@ -45,7 +45,7 @@ value = 100.0
 nine_patch_stretch = true
 texture_under = ExtResource("1_x0pe6")
 texture_over = ExtResource("2_h4hwc")
-texture_progress = ExtResource("3_uex37")
+texture_progress = ExtResource("3_hgeo3")
 tint_progress = Color(1, 0, 0, 1)
 
 [node name="Label" type="Label" parent="HealthBar"]
@@ -55,24 +55,27 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -31.5
-offset_top = -8.5
-offset_right = 31.5
+offset_left = -35.5
+offset_top = -10.5
+offset_right = 35.5
 offset_bottom = 8.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "250 / 500"
 label_settings = SubResource("LabelSettings_18cba")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="ActionsBar" type="TextureProgressBar" parent="."]
 offset_left = 136.0
-offset_top = 84.0
+offset_top = 88.0
 offset_right = 372.0
-offset_bottom = 111.0
+offset_bottom = 115.0
 value = 100.0
+nine_patch_stretch = true
 texture_under = ExtResource("1_x0pe6")
 texture_over = ExtResource("2_h4hwc")
-texture_progress = ExtResource("5_2yci7")
+texture_progress = ExtResource("5_o2apu")
 
 [node name="Label" type="Label" parent="ActionsBar"]
 layout_mode = 1
@@ -82,13 +85,15 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -4.0
-offset_top = -9.5
+offset_top = -11.5
 offset_right = 4.0
-offset_bottom = 9.5
+offset_bottom = 7.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "5"
 label_settings = SubResource("LabelSettings_b6vdx")
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Sprite" type="TextureRect" parent="."]
 material = SubResource("ShaderMaterial_plxvj")
@@ -108,6 +113,7 @@ offset_bottom = 142.0
 texture = ExtResource("7_mbqr3")
 
 [node name="Mask" type="TextureRect" parent="."]
+visible = false
 offset_left = 7.0
 offset_top = 15.0
 offset_right = 439.0
@@ -117,54 +123,24 @@ texture = ExtResource("8_hr57s")
 [node name="Modifiers" type="HBoxContainer" parent="."]
 custom_minimum_size = Vector2(163, 20)
 offset_left = 163.0
-offset_top = 19.0
-offset_right = 353.0
-offset_bottom = 49.0
+offset_top = 35.0
+offset_right = 326.0
+offset_bottom = 55.0
 theme_override_constants/separation = 10
 alignment = 1
 
-[node name="Modifier1" type="TextureRect" parent="Modifiers"]
-visible = false
-custom_minimum_size = Vector2(30, 30)
-layout_mode = 2
-expand_mode = 1
-
-[node name="Modifier2" type="TextureRect" parent="Modifiers"]
-visible = false
-custom_minimum_size = Vector2(30, 30)
-layout_mode = 2
-expand_mode = 1
-
-[node name="Modifier3" type="TextureRect" parent="Modifiers"]
-visible = false
-custom_minimum_size = Vector2(30, 30)
-layout_mode = 2
-expand_mode = 1
-
-[node name="Modifier4" type="TextureRect" parent="Modifiers"]
-visible = false
-custom_minimum_size = Vector2(30, 30)
-layout_mode = 2
-expand_mode = 1
-
-[node name="Modifier5" type="TextureRect" parent="Modifiers"]
-visible = false
-custom_minimum_size = Vector2(30, 30)
-layout_mode = 2
-expand_mode = 1
-
 [node name="Attack-Defense" type="HBoxContainer" parent="."]
-offset_left = 24.0
-offset_top = 117.0
-offset_right = 159.0
-offset_bottom = 147.0
+offset_left = 27.0
+offset_top = 133.0
+offset_right = 162.0
+offset_bottom = 163.0
 theme_override_constants/separation = 75
 alignment = 1
 
 [node name="AttackIcon" type="TextureRect" parent="Attack-Defense"]
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
-texture = ExtResource("10_uwcal")
+texture = ExtResource("10_h5vyb")
 expand_mode = 1
 
 [node name="Attack" type="Label" parent="Attack-Defense/AttackIcon"]
@@ -188,7 +164,7 @@ vertical_alignment = 1
 [node name="DefenseIcon" type="TextureRect" parent="Attack-Defense"]
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
-texture = ExtResource("11_p27hf")
+texture = ExtResource("11_ryd7v")
 expand_mode = 1
 
 [node name="Defense" type="Label" parent="Attack-Defense/DefenseIcon"]

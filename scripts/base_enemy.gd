@@ -68,6 +68,14 @@ func apply_status(type: String) -> void:
 			break
 
 
+func update_status() -> void:
+	if modifiers_container.get_child_count() <= 0:
+		return
+	
+	for status in modifiers_container.get_children():
+		status.update_durability("decrease")
+
+
 # método de morte
 func kill() -> void:
 	play_animation("death")

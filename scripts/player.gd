@@ -74,29 +74,42 @@ func take_damage(damage: int) -> void:
 	update_bar()
 
 
-func apply_status(type: String) -> void:
+func apply_status(type: String, value: int) -> void:
 	var modifiers_container = hud.get_node("Modifiers")
-	var target = null
+	var status_instance
+	
+	if modifiers_container.get_child_count() <= 0:
+		match type:
+			"poison":
+				pass
+			
+			"paralyzed":
+				pass
+			
+			"block":
+				status_instance = preload("res://scenes/status/block.tscn")
+		
+		var status_scene = status_instance.instantiate()
+		status_scene.status_modifier = value
+		modifiers_container.add_child(status_scene)
+		return
+	
+	# verificar se status aplicado ja existe no player
+	for status in modifiers_container.get_children():
+		if status.status_name == type:
+			status.update_durability("increase")
+			break
+
+
+func update_status() -> void:
+	var modifiers_container = hud.get_node("Modifiers")
+	if modifiers_container.get_child_count() <= 0:
+		return
 	
 	for status in modifiers_container.get_children():
-		if status.texture == null:
-			target = status
-			break
-			
-	match type:
-		"poison":
-			target.texture = load("res://assets/Environment/status_icon/poison.png")
-			target.show()
-		
-		"paralyzed":
-			target.texture = load("res://assets/Environment/status_icon/paralysis.png")
-			target.show()
-		
-		"block":
-			target.texture = load("res://assets/Environment/status_icon/block.png")
-			target.show()
+		status.update_durability("decrease")
 
 
-func spend_energy(card_cost: int) -> void:
-	actions -= card_cost
+func spend_energy() -> void:
+	actions -= 1
 	update_bar()

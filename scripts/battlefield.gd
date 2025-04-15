@@ -8,6 +8,7 @@ var target_enemy = null
 @export var deck_size: Label
 @export var discard_pile_size: Label
 
+
 func _ready() -> void:
 	connect_enemy_signal()
 
@@ -57,9 +58,9 @@ func perform_action_card(card, target) -> void:
 			
 	elif target is Player:
 		if card.card_type == "defense":
-			player.apply_status(card.status_type)
+			player.apply_status(card.status_type, card.card_value)
 	
-	player.spend_energy(card.card_cost)
+	player.spend_energy() # card.card_cost
 	$Background/Player/PlayerHand.discard_pile.append(card)
 	card.queue_free()
 	
@@ -76,7 +77,7 @@ func on_mouse_exited() -> void:
 func _on_end_turn_pressed() -> void:
 	for enemy in get_tree().get_nodes_in_group("enemy"):
 		apply_status_effect(enemy)
-		decrease_status_enemy(enemy)
+		enemy.update_status()
 		player.take_damage(enemy.damage)
 	
 	for card in $Background/Player/PlayerHand.get_children():
@@ -86,14 +87,7 @@ func _on_end_turn_pressed() -> void:
 	$Background/Player/PlayerHand.draw_card(4)
 	player.actions = 4
 	player.update_bar()
-
-
-func decrease_status_enemy(enemy) -> void:
-	var enemy_modifier = enemy.get_node("Modifiers")
-	
-	if enemy_modifier.get_child_count() > 0:
-		for status in enemy_modifier.get_children():
-			status.update_durability("decrease")
+	player.update_status()
 
 
 func apply_status_effect(enemy) -> void:
