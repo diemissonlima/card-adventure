@@ -68,6 +68,10 @@ func apply_status(type: String) -> void:
 			break
 
 
+func apply_status_effect() -> void:
+	pass
+
+
 func update_status() -> void:
 	if modifiers_container.get_child_count() <= 0:
 		return

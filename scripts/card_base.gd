@@ -3,6 +3,7 @@ class_name CardBase
 
 @export_category("Variaveis")
 @export var card_name: String
+@export var card_cost: int = 1
 @export var card_value: int
 @export var times_used: int
 @export_enum("attack", "defense", "technique") var card_type: String

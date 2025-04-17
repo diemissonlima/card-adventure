@@ -7,7 +7,6 @@
 
 [node name="Corte" instance=ExtResource("1_kju07")]
 card_name = "Corte"
-card_cost = 1
 card_value = 5
 times_used = 1
 card_type = "attack"

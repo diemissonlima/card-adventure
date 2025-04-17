@@ -7,7 +7,6 @@
 
 [node name="Bloquear" instance=ExtResource("1_vq25s")]
 card_name = "Bloquear"
-card_cost = 1
 card_value = 5
 times_used = 1
 card_type = "defense"
