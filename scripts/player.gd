@@ -21,12 +21,15 @@ var action_bar: TextureProgressBar = null
 var info_container: HBoxContainer = null
 var attack_label = null
 var defense_label = null
+var modifiers_container = null
 
 
 func _ready() -> void:
 	init_bar()
 	init_label()
 	send_deck_to_battlefield()
+	
+	modifiers_container = hud.get_node("Modifiers")
 
 
 func init_bar() -> void:
@@ -69,13 +72,24 @@ func send_deck_to_battlefield() -> void:
 	get_tree().call_group("player_hand", "get_player_deck", deck)
 
 
-func take_damage(damage: int) -> void:
-	health -= damage
+func take_damage(value: int) -> void:
+	if shield > 0:
+		if value <= shield:
+			shield -= value
+			return
+			
+		else:
+			var leftover = value - shield
+			shield = 0
+			health -= leftover
+			update_bar()
+			return
+	
+	health -= value
 	update_bar()
 
 
 func apply_status(type: String, value: int) -> void:
-	var modifiers_container = hud.get_node("Modifiers")
 	var status_instance
 	
 	if modifiers_container.get_child_count() <= 0:
@@ -88,6 +102,7 @@ func apply_status(type: String, value: int) -> void:
 			
 			"block":
 				status_instance = preload("res://scenes/status/block.tscn")
+				shield += (value + defense)
 		
 		var status_scene = status_instance.instantiate()
 		status_scene.status_modifier = value
@@ -97,12 +112,15 @@ func apply_status(type: String, value: int) -> void:
 	# verificar se status aplicado ja existe no player
 	for status in modifiers_container.get_children():
 		if status.status_name == type:
-			status.update_durability("increase")
+			if status.status_name == "block":
+				shield += (value + defense)
+			else:
+				status.update_durability("increase")
+				
 			break
 
 
 func update_status() -> void:
-	var modifiers_container = hud.get_node("Modifiers")
 	if modifiers_container.get_child_count() <= 0:
 		return
 	

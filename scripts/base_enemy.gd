@@ -34,8 +34,8 @@ func update_bar() -> void:
 
 
 # recebe o dano do player
-func take_damage(damage: int, times_used: int) -> void:
-	var new_damage: int = damage * times_used
+func take_damage(value: int, times_used: int) -> void:
+	var new_damage: int = value * times_used
 	
 	health -= new_damage
 	play_animation("hit")
@@ -95,6 +95,14 @@ func get_enemy_name() -> void:
 
 func play_animation(anim_name: String) -> void:
 	animation.play(anim_name)
+
+
+func show_cursor() -> void:
+	$Cursor.visible = true
+
+
+func hide_cursor() -> void:
+	$Cursor.visible = false
 
 
 func _on_aux_animation_animation_finished(anim_name: StringName) -> void:

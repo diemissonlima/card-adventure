@@ -63,26 +63,30 @@ func perform_action_card(card, target) -> void:
 	player.spend_energy() # card.card_cost
 	$Background/Player/PlayerHand.discard_pile.append(card)
 	card.queue_free()
-	
-	
+
+
 func on_mouse_area_entered(enemy) -> void:
 	can_click = true
 	target_enemy = enemy
+	enemy.show_cursor()
 
 
 func on_mouse_exited() -> void:
 	can_click = false
+	target_enemy.hide_cursor()
 
 
 func _on_end_turn_pressed() -> void:
+	for card in $Background/Player/PlayerHand.get_children():
+		$Background/Player/PlayerHand.discard_pile.append(card.scene_path)
+		card.queue_free()
+		await get_tree().create_timer(0.5).timeout
+		
 	for enemy in get_tree().get_nodes_in_group("enemy"):
 		apply_status_effect(enemy)
-		enemy.update_status()
 		player.take_damage(enemy.damage)
+		await get_tree().create_timer(0.5).timeout
 	
-	for card in $Background/Player/PlayerHand.get_children():
-		$Background/Player/PlayerHand.discard_pile.append(card)
-		card.queue_free()
 	
 	$Background/Player/PlayerHand.draw_card(4)
 	player.actions = 4
@@ -98,3 +102,5 @@ func apply_status_effect(enemy) -> void:
 			match status.status_name:
 				"poison":
 					enemy.take_damage(15, 1)
+	
+	enemy.update_status()

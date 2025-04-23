@@ -8,6 +8,7 @@ class_name CardBase
 @export var times_used: int
 @export_enum("attack", "defense", "technique") var card_type: String
 @export_enum("null", "block", "poison", "paralyzed", "bleed") var status_type: String
+@export var scene_path: String
 
 var can_click: bool = false
 
@@ -15,7 +16,7 @@ func _ready() -> void:
 	$Background/BoxName/Name.text = card_name
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("action") and can_click:
 		get_tree().call_group("battlefield", "get_card_in_use", self)
 

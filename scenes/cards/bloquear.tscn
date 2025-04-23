@@ -11,6 +11,7 @@ card_value = 5
 times_used = 1
 card_type = "defense"
 status_type = "block"
+scene_path = "res://scenes/cards/bloquear.tscn"
 
 [node name="Background" parent="." index="0"]
 texture = ExtResource("2_ltwit")

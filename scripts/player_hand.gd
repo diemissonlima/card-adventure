@@ -36,3 +36,4 @@ func draw_card(quantity: int) -> void:
 		var card = player_deck[0]
 		add_card_to_hand(card)
 		player_deck.pop_front()
+		await get_tree().create_timer(0.5).timeout
