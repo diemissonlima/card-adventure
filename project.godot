@@ -15,10 +15,14 @@ run/main_scene="res://scenes/enviroment/battlefield.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.png"
 
+[autoload]
+
+CardFactory="*res://scripts/global/card_factory.gd"
+
 [display]
 
-window/size/window_width_override=1440
-window/size/window_height_override=900
+window/size/window_width_override=1366
+window/size/window_height_override=768
 window/stretch/mode="canvas_items"
 
 [input]

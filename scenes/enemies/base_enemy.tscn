@@ -68,42 +68,6 @@ tracks/1/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Cursor:texture")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("6_a3pso")]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Cursor:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(30, -44.5)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Cursor:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
 
 [sub_resource type="Animation" id="Animation_vcjqm"]
 resource_name = "death"
@@ -156,21 +120,7 @@ modifiers_container = NodePath("Modifiers")
 max_health = 100
 health = 100
 damage = 10
-
-[node name="Cursor" type="TextureRect" parent="."]
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -21.3333
-offset_top = -112.0
-offset_right = 18.6667
-offset_bottom = -72.0
-grow_horizontal = 2
-grow_vertical = 0
-texture = ExtResource("6_a3pso")
-expand_mode = 1
+actions = Array[String](["attack", "defense"])
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 visible = false
@@ -214,6 +164,23 @@ text = "250 / 500"
 label_settings = SubResource("LabelSettings_nojvc")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Cursor" type="TextureRect" parent="HealthBar"]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -63.5
+offset_right = 20.0
+offset_bottom = -23.5
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("6_a3pso")
+expand_mode = 1
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
 scale = Vector2(1.5, 1.5)

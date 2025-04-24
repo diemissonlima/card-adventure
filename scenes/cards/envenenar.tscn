@@ -7,10 +7,10 @@
 
 [node name="Envenenar" instance=ExtResource("1_kocgd")]
 card_name = "Envenenar"
+card_id = "envenenar"
 times_used = 1
 card_type = "technique"
 status_type = "poison"
-scene_path = "res://scenes/cards/envenenar.tscn"
 
 [node name="Background" parent="." index="0"]
 texture = ExtResource("2_n8tcj")

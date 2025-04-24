@@ -11,8 +11,5 @@ res://scenes/cards/corte_diagonal.tscn
 res://scenes/cards/envenenar.tscn
 res://scenes/status/block.tscn
 res://scenes/status/poison.tscn
+res://scenes/cards/corte_tornado.tscn
 res://scripts/base_enemy.gd
-res://scripts/card_base.gd
-res://scripts/player.gd
-res://scripts/battlefield.gd
-res://scripts/player_hand.gd

@@ -7,11 +7,12 @@
 
 [node name="Corte" instance=ExtResource("1_kju07")]
 card_name = "Corte"
+card_id = "corte"
 card_value = 5
 times_used = 1
 card_type = "attack"
+attack_type = "single"
 status_type = "null"
-scene_path = "res://scenes/cards/corte.tscn"
 
 [node name="Background" parent="." index="0"]
 texture = ExtResource("2_teh1m")

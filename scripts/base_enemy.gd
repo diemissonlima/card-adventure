@@ -13,6 +13,7 @@ class_name BaseEnemy
 @export var health: int
 @export var damage: int
 @export var shield: int
+@export var actions: Array[String]
 
 
 func _ready() -> void:
@@ -98,11 +99,11 @@ func play_animation(anim_name: String) -> void:
 
 
 func show_cursor() -> void:
-	$Cursor.visible = true
+	$HealthBar/Cursor.visible = true
 
 
 func hide_cursor() -> void:
-	$Cursor.visible = false
+	$HealthBar/Cursor.visible = false
 
 
 func _on_aux_animation_animation_finished(anim_name: StringName) -> void:

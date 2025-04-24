@@ -3,14 +3,16 @@ class_name CardBase
 
 @export_category("Variaveis")
 @export var card_name: String
+@export var card_id: String
 @export var card_cost: int = 1
 @export var card_value: int
 @export var times_used: int
 @export_enum("attack", "defense", "technique") var card_type: String
+@export_enum("single", "multiple") var attack_type: String
 @export_enum("null", "block", "poison", "paralyzed", "bleed") var status_type: String
-@export var scene_path: String
 
 var can_click: bool = false
+
 
 func _ready() -> void:
 	$Background/BoxName/Name.text = card_name

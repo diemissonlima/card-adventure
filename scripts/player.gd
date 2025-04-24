@@ -11,7 +11,7 @@ class_name Player
 @export var actions: int
 
 @export_category("Variaveis Deck")
-@export var deck_list: Array[PackedScene]
+@export var deck_list: Array[String]
 
 @export_category("Objetos")
 @export var hud: CanvasLayer

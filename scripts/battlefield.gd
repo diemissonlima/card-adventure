@@ -3,6 +3,7 @@ class_name Battlefield
 
 var can_click: bool = false
 var target_enemy = null
+var previous_enemy = null
 
 @export var player: Node2D
 @export var deck_size: Label
@@ -49,9 +50,14 @@ func get_card_in_use(card: Control) -> void:
 
 func perform_action_card(card, target) -> void:
 	if target is BaseEnemy:
-		if card.card_type == "attack":
-			var damage: int = player.damage + card.card_value
+		var damage: int = player.damage + card.card_value
+		
+		if card.card_type == "attack" and card.attack_type == "single":
 			target.take_damage(damage, card.times_used)
+			
+		elif card.card_type == "attack" and card.attack_type == "multiple":
+			for enemy in get_tree().get_nodes_in_group("enemy"):
+				enemy.take_damage(damage, card.times_used)
 			
 		elif card.card_type == "technique":
 			target.apply_status(card.status_type)
@@ -61,7 +67,7 @@ func perform_action_card(card, target) -> void:
 			player.apply_status(card.status_type, card.card_value)
 	
 	player.spend_energy() # card.card_cost
-	$Background/Player/PlayerHand.discard_pile.append(card)
+	$Background/Player/PlayerHand.discard_pile.append(card.card_id)
 	card.queue_free()
 
 
@@ -69,16 +75,19 @@ func on_mouse_area_entered(enemy) -> void:
 	can_click = true
 	target_enemy = enemy
 	enemy.show_cursor()
+	
+	if previous_enemy != null:
+		previous_enemy.hide_cursor()
 
 
 func on_mouse_exited() -> void:
 	can_click = false
-	target_enemy.hide_cursor()
+	previous_enemy = target_enemy
 
 
 func _on_end_turn_pressed() -> void:
 	for card in $Background/Player/PlayerHand.get_children():
-		$Background/Player/PlayerHand.discard_pile.append(card.scene_path)
+		$Background/Player/PlayerHand.discard_pile.append(card.card_id)
 		card.queue_free()
 		await get_tree().create_timer(0.5).timeout
 		
