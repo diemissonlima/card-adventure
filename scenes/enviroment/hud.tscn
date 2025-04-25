@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cp13lbvmsx8ob"]
+[gd_scene load_steps=18 format=3 uid="uid://cp13lbvmsx8ob"]
 
 [ext_resource type="Texture2D" uid="uid://diewhd2puo7v4" path="res://assets/Environment/player/BqBar.png" id="1_x0pe6"]
 [ext_resource type="Texture2D" uid="uid://cj4y5xpvhwuwq" path="res://assets/Environment/player/Border.png" id="2_h4hwc"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bl4fhsvbs60mx" path="res://assets/Environment/player/paladin minion.png" id="6_c7jwg"]
 [ext_resource type="Texture2D" uid="uid://b3r1ekn3aeoif" path="res://assets/Environment/player/AvatarCircle.png" id="7_mbqr3"]
 [ext_resource type="Texture2D" uid="uid://wrwd11qyuvhl" path="res://assets/Environment/player/Overlay Border.png" id="8_hr57s"]
+[ext_resource type="Texture2D" uid="uid://bgwcfyp3kr1u8" path="res://assets/Environment/status_icon/block.png" id="10_8murv"]
 [ext_resource type="Texture2D" uid="uid://bpf478olk18er" path="res://assets/Environment/status_icon/ataque.png" id="10_h5vyb"]
 [ext_resource type="Texture2D" uid="uid://dtwcutqgc1njb" path="res://assets/Environment/status_icon/escudo.png" id="11_ryd7v"]
 
@@ -26,6 +27,13 @@ outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_plxvj"]
 shader = ExtResource("6_7f3ue")
+
+[sub_resource type="LabelSettings" id="LabelSettings_78duw"]
+line_spacing = 0.0
+font = ExtResource("4_08uok")
+font_size = 22
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_dynov"]
 line_spacing = 0.0
@@ -128,6 +136,31 @@ offset_right = 326.0
 offset_bottom = 55.0
 theme_override_constants/separation = 10
 alignment = 1
+
+[node name="ShieldContainer" type="TextureRect" parent="."]
+visible = false
+custom_minimum_size = Vector2(55, 55)
+offset_left = 379.0
+offset_top = 59.0
+offset_right = 434.0
+offset_bottom = 114.0
+texture = ExtResource("10_8murv")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="ShieldContainer"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -12.5
+offset_right = 0.5
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_78duw")
 
 [node name="Attack-Defense" type="HBoxContainer" parent="."]
 offset_left = 27.0

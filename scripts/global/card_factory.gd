@@ -8,3 +8,8 @@ var card_list: Dictionary = {
 	"bloquear": "res://scenes/cards/bloquear.tscn",
 	"envenenar": "res://scenes/cards/envenenar.tscn"
 }
+
+var icons: Dictionary = {
+	"attack": "res://assets/Environment/status_icon/ataque.png",
+	"defense": "res://assets/Environment/status_icon/block.png"
+}

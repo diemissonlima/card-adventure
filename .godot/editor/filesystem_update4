@@ -1,8 +1,8 @@
-res://scenes/cards/card_base.tscn
+res://scenes/enemies/base_enemy.tscn
 res://scenes/cards/card_base.gdshader
 res://scenes/enviroment/hud.gdshader
+res://scenes/cards/card_base.tscn
 res://scenes/enviroment/battlefield.tscn
-res://scenes/enemies/base_enemy.tscn
 res://scenes/enviroment/player.tscn
 res://scenes/enviroment/hud.tscn
 res://scenes/cards/bloquear.tscn
@@ -12,4 +12,9 @@ res://scenes/cards/envenenar.tscn
 res://scenes/status/block.tscn
 res://scenes/status/poison.tscn
 res://scenes/cards/corte_tornado.tscn
+res://scripts/battlefield.gd
 res://scripts/base_enemy.gd
+res://scripts/player_hand.gd
+res://scripts/player.gd
+res://scripts/card_base.gd
+res://scripts/global/card_factory.gd

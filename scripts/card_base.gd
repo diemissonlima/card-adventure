@@ -25,7 +25,7 @@ func _process(_delta: float) -> void:
 
 func _on_area_mouse_entered() -> void:
 	can_click = true
-	self.position.y = - 50.0
+	self.position.y = - 25.0
 
 
 func _on_area_mouse_exited() -> void:

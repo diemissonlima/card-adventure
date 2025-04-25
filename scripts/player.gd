@@ -60,6 +60,10 @@ func update_bar() -> void:
 	
 	action_bar.value = actions
 	action_bar.get_node("Label").text = str(actions)
+	
+	hud.get_node("ShieldContainer/Label").text = str(shield)
+	if shield <= 0:
+		hud.get_node("ShieldContainer").hide()
 
 
 func update_label() -> void:
@@ -76,6 +80,7 @@ func take_damage(value: int) -> void:
 	if shield > 0:
 		if value <= shield:
 			shield -= value
+			update_bar()
 			return
 			
 		else:
@@ -101,8 +106,10 @@ func apply_status(type: String, value: int) -> void:
 				pass
 			
 			"block":
-				status_instance = preload("res://scenes/status/block.tscn")
 				shield += (value + defense)
+				hud.get_node("ShieldContainer").show()
+				hud.get_node("ShieldContainer/Label").text = str(shield)
+				return
 		
 		var status_scene = status_instance.instantiate()
 		status_scene.status_modifier = value
@@ -112,11 +119,7 @@ func apply_status(type: String, value: int) -> void:
 	# verificar se status aplicado ja existe no player
 	for status in modifiers_container.get_children():
 		if status.status_name == type:
-			if status.status_name == "block":
-				shield += (value + defense)
-			else:
-				status.update_durability("increase")
-				
+			status.update_durability("increase")
 			break
 
 

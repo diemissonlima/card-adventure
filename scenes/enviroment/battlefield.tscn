@@ -101,12 +101,15 @@ expand_mode = 1
 
 [node name="Label" type="Label" parent="Background/Player/Deck"]
 layout_mode = 1
-offset_left = 8.0
-offset_top = -13.0
-offset_right = 24.0
-offset_bottom = 10.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -5.0
+offset_top = -24.0
+offset_right = 5.0
+offset_bottom = 1.0
+grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "10"
 label_settings = SubResource("LabelSettings_el2ic")
 
 [node name="Descarte" type="TextureRect" parent="Background/Player"]
@@ -127,16 +130,15 @@ expand_mode = 1
 
 [node name="Label" type="Label" parent="Background/Player/Descarte"]
 layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -28.0
-offset_top = -12.0
-offset_right = -8.0
-offset_bottom = 13.0
-grow_horizontal = 0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -5.0
+offset_top = -24.0
+offset_right = -4.0
+offset_bottom = 1.0
+grow_horizontal = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "10"
 label_settings = SubResource("LabelSettings_a6tri")
 
 [node name="EndTurn" type="Button" parent="."]

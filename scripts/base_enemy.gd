@@ -19,6 +19,7 @@ class_name BaseEnemy
 func _ready() -> void:
 	get_enemy_name()
 	init_bar()
+	get_action()
 
 
 # inicializa a barra de vida
@@ -35,9 +36,28 @@ func update_bar() -> void:
 
 
 # recebe o dano do player
-func take_damage(value: int, times_used: int) -> void:
+func take_damage(value: int, times_used: int, damage_type: String) -> void:
 	var new_damage: int = value * times_used
 	
+	if shield > 0 and damage_type == "physical": # se tiver escudo e o ataque for fisico
+		if new_damage <= shield: # dano menor ou igual ao escudo
+			shield -= new_damage
+			return
+			
+		else: # dano maior que o escudo
+			var leftover = new_damage - shield
+			shield = 0
+			health -= leftover
+			play_animation("hit")
+			
+			if health <= 0:
+				health = 0
+				kill()
+				
+			update_bar()
+			return
+	
+	# dano aplicado normal, sem a influencia do escudo
 	health -= new_damage
 	play_animation("hit")
 	
@@ -48,9 +68,10 @@ func take_damage(value: int, times_used: int) -> void:
 	update_bar()
 
 
+# mostra o status no modifiers_container
 func apply_status(type: String) -> void:
 	var status_quantity: int = $Modifiers.get_child_count()
-	if status_quantity <= 0:
+	if status_quantity <= 0: # se nao tiver nenhum status adiciona o atual
 		var status_instance
 		match type:
 			"poison":
@@ -63,16 +84,33 @@ func apply_status(type: String) -> void:
 		$Modifiers.add_child(status_scene)
 		return
 	
+	# caso ja exista algum status, verifica se o status em questao igual ao status aplicado
 	for status in $Modifiers.get_children():
 		if status.status_name == type:
 			status.update_durability("increase")
 			break
 
 
+# aplicado o efeito do status
 func apply_status_effect() -> void:
-	pass
+	if modifiers_container.get_child_count() > 0:
+		for status in modifiers_container.get_children():
+			match status.status_name:
+				"poison":
+					take_damage(15, 1, "status")
+	
+	update_status()
 
 
+# randomiza a ação que será tomada
+func get_action() -> String:
+	var action = actions[randi() % actions.size()]
+	$ActionBallon/Icon.texture = load(CardFactory.icons[action])
+	$ActionBallon.show()
+	return action
+
+
+# atualiza o status 
 func update_status() -> void:
 	if modifiers_container.get_child_count() <= 0:
 		return
