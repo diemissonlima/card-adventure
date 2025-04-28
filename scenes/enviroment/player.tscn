@@ -10,4 +10,4 @@ damage = 3
 defense = 2
 max_actions = 4
 actions = 4
-deck_list = Array[String](["corte", "corte", "corte", "corte_diagonal", "bloquear", "bloquear", "envenenar", "corte_tornado"])
+deck_list = Array[String](["corte", "corte", "corte", "corte_duplo", "bloquear", "bloquear", "envenenar", "corte_tornado", "corte_rapido", "pocao_vida"])

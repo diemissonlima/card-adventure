@@ -1,11 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://cgsdisnwd5sk3"]
+[gd_scene load_steps=13 format=3 uid="uid://cgsdisnwd5sk3"]
 
 [ext_resource type="Script" path="res://scripts/battlefield.gd" id="1_yqoyk"]
-[ext_resource type="PackedScene" uid="uid://b5iw5jg31baab" path="res://scenes/enemies/base_enemy.tscn" id="2_jx5xc"]
 [ext_resource type="Texture2D" uid="uid://ygsbnbykkuwe" path="res://assets/Environment/2.png" id="3_unkll"]
+[ext_resource type="PackedScene" uid="uid://ccwipqsrgsok" path="res://scenes/enemies/golem.tscn" id="4_4oq1c"]
 [ext_resource type="PackedScene" uid="uid://5wkrskl1xh3u" path="res://scenes/enviroment/player.tscn" id="4_ge5ri"]
 [ext_resource type="PackedScene" uid="uid://cp13lbvmsx8ob" path="res://scenes/enviroment/hud.tscn" id="5_jn76p"]
+[ext_resource type="PackedScene" uid="uid://cru8a8ty4w8b3" path="res://scenes/enemies/golem_2.tscn" id="5_k1ib0"]
 [ext_resource type="Script" path="res://scripts/player_hand.gd" id="6_dyhce"]
+[ext_resource type="PackedScene" uid="uid://bp7g8bbjd38kr" path="res://scenes/enemies/necromante.tscn" id="6_my5e6"]
 [ext_resource type="Texture2D" uid="uid://bojbgjlb0ypih" path="res://assets/Card Sprites/Card Back/_experimental (1).png" id="7_cp5oe"]
 [ext_resource type="FontFile" uid="uid://cbvsmohw8mlwd" path="res://assets/font/njo_14.ttf" id="10_5042g"]
 
@@ -54,17 +56,17 @@ position = Vector2(0, -8)
 [node name="Enemy1" type="Marker2D" parent="Background/Enemies"]
 position = Vector2(576, 276)
 
-[node name="BaseEnemy" parent="Background/Enemies/Enemy1" instance=ExtResource("2_jx5xc")]
+[node name="Golem" parent="Background/Enemies/Enemy1" instance=ExtResource("4_4oq1c")]
 
 [node name="Enemy2" type="Marker2D" parent="Background/Enemies"]
 position = Vector2(926, 351)
 
-[node name="BaseEnemy" parent="Background/Enemies/Enemy2" instance=ExtResource("2_jx5xc")]
+[node name="Golem2" parent="Background/Enemies/Enemy2" instance=ExtResource("5_k1ib0")]
 
 [node name="Enemy3" type="Marker2D" parent="Background/Enemies"]
 position = Vector2(226, 351)
 
-[node name="BaseEnemy" parent="Background/Enemies/Enemy3" instance=ExtResource("2_jx5xc")]
+[node name="Necromante" parent="Background/Enemies/Enemy3" instance=ExtResource("6_my5e6")]
 
 [node name="Player" parent="Background" node_paths=PackedStringArray("hud") instance=ExtResource("4_ge5ri")]
 hud = NodePath("../../CanvasLayer")

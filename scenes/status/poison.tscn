@@ -3,8 +3,12 @@
 [ext_resource type="PackedScene" uid="uid://t88u65mpnlst" path="res://scenes/status/base_status.tscn" id="1_10wki"]
 
 [node name="Poison" instance=ExtResource("1_10wki")]
+offset_right = 20.0
+offset_bottom = 20.0
+expand_mode = 1
 status_name = "poison"
-status_description = "Dano de Veneno"
+status_modifier = 15
+status_description = "Causa 15 de dano de Veneno"
 
 [node name="Durability" parent="." index="0"]
 offset_left = -14.0

@@ -94,13 +94,20 @@ func take_damage(value: int, type: String) -> void:
 	update_bar()
 
 
-func apply_status(type: String, value: int) -> void:
-	if type == "block":
-		shield += (value + defense)
+func apply_card_effect(card: Control) -> void:
+	if card.card_type == "defense":
+		shield += (card.card_value + defense)
 		hud.get_node("ShieldContainer").show()
 		hud.get_node("ShieldContainer/Label").text = str(shield)
-		return
-		
+	
+	if card.card_type == "buff":
+		if card.card_id == "pocao_vida":
+			health += 20
+			if health > max_health:
+				health = max_health
+
+
+func apply_status(type: String, value: int) -> void:
 	var status_instance
 	if modifiers_container.get_child_count() <= 0:
 		match type:
@@ -111,7 +118,6 @@ func apply_status(type: String, value: int) -> void:
 				pass
 				
 		var status_scene = status_instance.instantiate()
-		status_scene.status_modifier = value
 		modifiers_container.add_child(status_scene)
 		return
 	
@@ -128,7 +134,16 @@ func apply_status_effect() -> void:
 		
 	for status in modifiers_container.get_children():
 		if status.status_name == "poison":
-			take_damage(15, "status")
+			take_damage(calculate_status_damage("poison", status.status_modifier), "status")
+
+
+func calculate_status_damage(status: String, modifier: int) -> int:
+	var status_damage
+	
+	if status == "poison":
+		status_damage = round(max_health * modifier / 100)
+	
+	return status_damage
 
 
 func update_status() -> void:

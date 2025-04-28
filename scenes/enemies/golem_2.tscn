@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://cru8a8ty4w8b3"]
+
+[ext_resource type="PackedScene" uid="uid://b5iw5jg31baab" path="res://scenes/enemies/base_enemy.tscn" id="1_nhbxd"]
+[ext_resource type="Texture2D" uid="uid://cgpv0q0gitbp4" path="res://assets/enemies/2/1.png" id="2_hbdih"]
+[ext_resource type="Texture2D" uid="uid://b602hj1jx72e8" path="res://assets/enemies/2/2.png" id="3_iup8x"]
+[ext_resource type="Texture2D" uid="uid://bbft7indqj85o" path="res://assets/enemies/2/3.png" id="4_uq5d7"]
+[ext_resource type="Texture2D" uid="uid://174jlqi7pupo" path="res://assets/enemies/2/4.png" id="5_vlbbr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nrnba"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_hbdih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_iup8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_uq5d7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vlbbr")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Golem2" instance=ExtResource("1_nhbxd")]
+enemy_name = "Golem"
+max_health = 150
+health = 150
+damage = 12
+
+[node name="Animation" parent="." index="3"]
+sprite_frames = SubResource("SpriteFrames_nrnba")

@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://bp7g8bbjd38kr"]
+
+[ext_resource type="PackedScene" uid="uid://b5iw5jg31baab" path="res://scenes/enemies/base_enemy.tscn" id="1_e6vwa"]
+[ext_resource type="Texture2D" uid="uid://b575hh8bc8d4f" path="res://assets/enemies/3/1.png" id="2_janon"]
+[ext_resource type="Texture2D" uid="uid://x4heyj7hhd4b" path="res://assets/enemies/3/2.png" id="3_tpaju"]
+[ext_resource type="Texture2D" uid="uid://dbpefqi23ee7u" path="res://assets/enemies/3/3.png" id="4_84nox"]
+[ext_resource type="Texture2D" uid="uid://dqcxmwmwljtfc" path="res://assets/enemies/3/4.png" id="5_2bqgo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_scnee"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_janon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_tpaju")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_84nox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2bqgo")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Necromante" instance=ExtResource("1_e6vwa")]
+enemy_name = "Necromante"
+max_health = 175
+health = 175
+damage = 15
+actions_list = Array[String](["attack", "defense", "poison"])
+
+[node name="Animation" parent="." index="3"]
+sprite_frames = SubResource("SpriteFrames_scnee")

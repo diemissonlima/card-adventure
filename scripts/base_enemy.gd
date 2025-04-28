@@ -22,7 +22,6 @@ var shield_value: int = 0
 
 
 func _ready() -> void:
-	get_enemy_name()
 	init_bar()
 	get_action()
 
@@ -108,9 +107,18 @@ func apply_status_effect() -> void:
 		for status in modifiers_container.get_children():
 			match status.status_name:
 				"poison":
-					take_damage(15, 1, "status")
+					take_damage(calculate_status_damage("poison", status.status_modifier), 1, "status")
 	
 	update_status()
+
+
+func calculate_status_damage(type: String, modifier: int) -> int:
+	var status_damage
+	
+	if type == "poison":
+		status_damage = round(max_health * modifier / 100)
+	
+	return status_damage
 
 
 # randomiza a ação que será tomada
@@ -121,8 +129,9 @@ func get_action() -> void:
 	
 	if action == "attack":
 		$ActionBallon/ActionInfo/Label.text = "Causa " + str(damage) + " de dano"
+		damage = randi_range(5, 15)
 	elif action == "defense":
-		shield_value = randi() % 10 + 1
+		shield_value = randi_range(5, 10)
 		$ActionBallon/ActionInfo/Label.text = "Recebe " + str(shield_value) + " de escudo"
 	elif action == "poison":
 		$ActionBallon/ActionInfo/Label.text = "Causa 1 de Veneno"
@@ -140,14 +149,6 @@ func update_status() -> void:
 # método de morte
 func kill() -> void:
 	play_animation("death")
-
-
-func get_enemy_name() -> void:
-	var name_list = [
-		"enemy 1", "enemy 2", "enemy 3", "enemy 4", "enemy 5", "enemy 6"
-	]
-	var index: int = randi() % name_list.size()
-	enemy_name = name_list[index]
 
 
 func play_animation(anim_name: String) -> void:

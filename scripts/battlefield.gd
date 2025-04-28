@@ -36,18 +36,21 @@ func get_card_in_use(card: Control) -> void:
 	match card_used.card_type: # verifica o tipo da carta
 		"attack":
 			if target_enemy != null:
-				perform_action_card(card, target_enemy)
+				perform_action_card(card_used, target_enemy)
 			else:
 				return
 		
 		"defense":
-			perform_action_card(card, player)
+			perform_action_card(card_used, player)
 		
 		"technique":
 			if target_enemy != null:
-				perform_action_card(card, target_enemy)
+				perform_action_card(card_used, target_enemy)
 			else:
 				return
+			
+		"buff":
+			perform_action_card(card_used, player)
 
 
 # executa a ação da carta
@@ -67,11 +70,21 @@ func perform_action_card(card, target) -> void:
 			
 	elif target is Player:
 		if card.card_type == "defense":
-			player.apply_status(card.status_type, card.card_value)
+			player.apply_card_effect(card)
+		
+		elif card.card_type == "buff":
+			player.apply_card_effect(card)
 	
-	player.spend_energy() # gasta uma energia 
+	player.spend_energy() # gasta uma energia
+	if card.card_name.ends_with("Rápido"):
+		player.actions += 1
+		player.update_bar()
+		
 	$Background/Player/PlayerHand.discard_pile.append(card.card_id) # descarta a carta
 	card.queue_free() # deleta a carta da cena
+	
+	await get_tree().create_timer(0.5).timeout
+	$Background/Player/PlayerHand.draw_card(1) # compra uma nova carta
 
 
 # executa a ação do inimigo

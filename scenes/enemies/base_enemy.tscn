@@ -1,15 +1,11 @@
-[gd_scene load_steps=26 format=3 uid="uid://b5iw5jg31baab"]
+[gd_scene load_steps=22 format=3 uid="uid://b5iw5jg31baab"]
 
 [ext_resource type="Script" path="res://scripts/base_enemy.gd" id="1_ekd5x"]
 [ext_resource type="Texture2D" uid="uid://diewhd2puo7v4" path="res://assets/Environment/player/BqBar.png" id="2_25rev"]
 [ext_resource type="FontFile" uid="uid://cbvsmohw8mlwd" path="res://assets/font/njo_14.ttf" id="2_v7jh7"]
-[ext_resource type="Texture2D" uid="uid://j4nkhxvbodf4" path="res://assets/enemies/1/1.png" id="3_6tl23"]
 [ext_resource type="Texture2D" uid="uid://cj4y5xpvhwuwq" path="res://assets/Environment/player/Border.png" id="3_7gjvj"]
-[ext_resource type="Texture2D" uid="uid://b5sw7tki2sa72" path="res://assets/enemies/1/2.png" id="4_3on6j"]
 [ext_resource type="Texture2D" uid="uid://bv5nstha4sxev" path="res://assets/Environment/player/ProgressBar04.png" id="4_pxtcc"]
-[ext_resource type="Texture2D" uid="uid://d0rtrp4hpvo2d" path="res://assets/enemies/1/3.png" id="5_smeca"]
 [ext_resource type="Texture2D" uid="uid://d0jd3p4nq6cd6" path="res://assets/Environment/player/cursor.png" id="6_a3pso"]
-[ext_resource type="Texture2D" uid="uid://u0qrberc2wwv" path="res://assets/enemies/1/4.png" id="6_cp3q1"]
 [ext_resource type="Texture2D" uid="uid://bpf478olk18er" path="res://assets/Environment/status_icon/ataque.png" id="11_1o3la"]
 [ext_resource type="Texture2D" uid="uid://cm0o3sonrajcv" path="res://assets/Environment/status_icon/5814838.png" id="11_atkvk"]
 [ext_resource type="Script" path="res://scripts/action_ballon.gd" id="12_807o3"]
@@ -29,19 +25,7 @@ outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_87isi"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_6tl23")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_3on6j")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_smeca")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_cp3q1")
-}],
+"frames": [],
 "loop": true,
 "name": &"idle",
 "speed": 5.0
@@ -136,10 +120,7 @@ health_bar = NodePath("HealthBar")
 health_bar_label = NodePath("HealthBar/Label")
 animation = NodePath("AuxAnimation")
 modifiers_container = NodePath("Modifiers")
-max_health = 100
-health = 100
-damage = 10
-actions_list = Array[String](["attack", "defense", "poison"])
+actions_list = Array[String](["attack", "defense"])
 actions_list_icons = {
 "attack": "res://assets/Environment/status_icon/ataque.png",
 "defense": "res://assets/Environment/status_icon/block.png",
