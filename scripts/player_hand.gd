@@ -40,3 +40,8 @@ func draw_card(quantity: int) -> void:
 			add_card_to_hand(card)
 			player_deck.pop_front()
 			await get_tree().create_timer(0.5).timeout
+			
+			if player_deck.size() == 0:
+				player_deck = discard_pile.duplicate()
+				player_deck.shuffle()
+				discard_pile.clear()

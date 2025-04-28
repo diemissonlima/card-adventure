@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://5wkrskl1xh3u" path="res://scenes/enviroment/player.tscn" id="4_ge5ri"]
 [ext_resource type="PackedScene" uid="uid://cp13lbvmsx8ob" path="res://scenes/enviroment/hud.tscn" id="5_jn76p"]
 [ext_resource type="Script" path="res://scripts/player_hand.gd" id="6_dyhce"]
-[ext_resource type="Texture2D" uid="uid://cnv04q6uj5cda" path="res://assets/Card Sprites/Card Back/_cover.png" id="7_mbqnr"]
+[ext_resource type="Texture2D" uid="uid://bojbgjlb0ypih" path="res://assets/Card Sprites/Card Back/_experimental (1).png" id="7_cp5oe"]
 [ext_resource type="FontFile" uid="uid://cbvsmohw8mlwd" path="res://assets/font/njo_14.ttf" id="10_5042g"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_el2ic"]
@@ -23,7 +23,7 @@ font_size = 24
 outline_size = 4
 outline_color = Color(0, 0, 0, 1)
 
-[node name="Battlefield" type="Control" node_paths=PackedStringArray("player", "deck_size", "discard_pile_size") groups=["battlefield"]]
+[node name="Battlefield" type="Control" node_paths=PackedStringArray("end_turn_button", "player", "deck_size", "discard_pile_size") groups=["battlefield"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -32,6 +32,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_yqoyk")
+end_turn_button = NodePath("EndTurn")
 player = NodePath("Background/Player")
 deck_size = NodePath("Background/Player/Deck/Label")
 discard_pile_size = NodePath("Background/Player/Descarte/Label")
@@ -96,7 +97,7 @@ offset_top = 500.0
 offset_right = 74.0
 offset_bottom = 600.0
 grow_vertical = 0
-texture = ExtResource("7_mbqnr")
+texture = ExtResource("7_cp5oe")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="Background/Player/Deck"]
@@ -125,7 +126,7 @@ offset_right = 1128.0
 offset_bottom = 600.0
 grow_horizontal = 0
 grow_vertical = 0
-texture = ExtResource("7_mbqnr")
+texture = ExtResource("7_cp5oe")
 expand_mode = 1
 
 [node name="Label" type="Label" parent="Background/Player/Descarte"]

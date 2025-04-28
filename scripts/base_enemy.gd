@@ -13,7 +13,12 @@ class_name BaseEnemy
 @export var health: int
 @export var damage: int
 @export var shield: int
-@export var actions: Array[String]
+# essas duas variaveis sao usadas somente no action ballon
+@export var actions_list: Array[String]
+@export var actions_list_icons: Dictionary
+
+var action: String = ""
+var shield_value: int = 0
 
 
 func _ready() -> void:
@@ -33,6 +38,10 @@ func init_bar() -> void:
 func update_bar() -> void:
 	health_bar.value = health
 	health_bar_label.text = str(health) + " / " + str(max_health)
+	
+	$ShieldContainer/Label.text = str(shield)
+	if shield <= 0:
+		$ShieldContainer.visible = false
 
 
 # recebe o dano do player
@@ -42,6 +51,7 @@ func take_damage(value: int, times_used: int, damage_type: String) -> void:
 	if shield > 0 and damage_type == "physical": # se tiver escudo e o ataque for fisico
 		if new_damage <= shield: # dano menor ou igual ao escudo
 			shield -= new_damage
+			update_bar()
 			return
 			
 		else: # dano maior que o escudo
@@ -63,6 +73,7 @@ func take_damage(value: int, times_used: int, damage_type: String) -> void:
 	
 	if health <= 0:
 		health = 0
+		damage = 0
 		kill()
 	
 	update_bar()
@@ -103,11 +114,18 @@ func apply_status_effect() -> void:
 
 
 # randomiza a ação que será tomada
-func get_action() -> String:
-	var action = actions[randi() % actions.size()]
-	$ActionBallon/Icon.texture = load(CardFactory.icons[action])
+func get_action() -> void:
+	action = actions_list[randi() % actions_list.size()]
+	$ActionBallon/Icon.texture = load(actions_list_icons[action])
 	$ActionBallon.show()
-	return action
+	
+	if action == "attack":
+		$ActionBallon/ActionInfo/Label.text = "Causa " + str(damage) + " de dano"
+	elif action == "defense":
+		shield_value = randi() % 10 + 1
+		$ActionBallon/ActionInfo/Label.text = "Recebe " + str(shield_value) + " de escudo"
+	elif action == "poison":
+		$ActionBallon/ActionInfo/Label.text = "Causa 1 de Veneno"
 
 
 # atualiza o status 

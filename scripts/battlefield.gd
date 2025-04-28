@@ -5,6 +5,7 @@ var can_click: bool = false
 var target_enemy = null
 var previous_enemy = null
 
+@export var end_turn_button: Button
 @export var player: Node2D
 @export var deck_size: Label
 @export var discard_pile_size: Label
@@ -74,13 +75,18 @@ func perform_action_card(card, target) -> void:
 
 
 # executa a ação do inimigo
-func perform_enemy_action(enemy: BaseEnemy, action: String) -> void:
-	match action:
+func perform_enemy_action(enemy: BaseEnemy) -> void:
+	match enemy.action:
 		"defense": # se for defesa ele ganha escudo
-			enemy.shield += 5
+			enemy.shield += enemy.shield_value
+			enemy.get_node("ShieldContainer").visible = true
+			enemy.get_node("ShieldContainer/Label").text = str(enemy.shield)
 			
 		"attack": # se for ataque, causa dano ao player
-			player.take_damage(enemy.damage)
+			player.take_damage(enemy.damage, "physical")
+		
+		"poison":
+			player.apply_status("poison", 1)
 
 
 # função executada quando o mouse entrar na area do inimigo
@@ -101,17 +107,34 @@ func on_mouse_exited() -> void:
 
 # função executada quando o player clicar no botao de finalizar turno
 func _on_end_turn_pressed() -> void:
+	end_turn_button.disabled = true
+	
 	for card in $Background/Player/PlayerHand.get_children(): # descarta as cartas restantes da mao do player
 		$Background/Player/PlayerHand.discard_pile.append(card.card_id)
 		card.queue_free()
 		await get_tree().create_timer(0.5).timeout
-		
+	
+	end_turn_button.text = "Turno do Inimigo"
+	
 	for enemy in get_tree().get_nodes_in_group("enemy"): # verifica cada inimigo
 		enemy.apply_status_effect() # aplica status, caso tenha algum
-		perform_enemy_action(enemy, enemy.get_action()) # recebe a ação e passa pra funcao de executar a ação
+		perform_enemy_action(enemy) # recebe a ação e passa pra funcao de executar a ação
 		await get_tree().create_timer(0.5).timeout
+	
+	player.apply_status_effect()
 	
 	$Background/Player/PlayerHand.draw_card(4) # compra novas cartas
 	player.actions = 4 # restaura as ações do player
 	player.update_bar() # atualizar a barra de status (vida/ações)
 	player.update_status() # atualiza o status
+	
+	get_new_enemy_action()
+	
+	await get_tree().create_timer(2.0).timeout
+	end_turn_button.disabled = false
+	end_turn_button.text = "Finalizar Turno"
+
+
+func get_new_enemy_action() -> void:
+	for enemy in get_tree().get_nodes_in_group("enemy"):
+		enemy.get_action()

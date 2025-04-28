@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b5iw5jg31baab"]
+[gd_scene load_steps=26 format=3 uid="uid://b5iw5jg31baab"]
 
 [ext_resource type="Script" path="res://scripts/base_enemy.gd" id="1_ekd5x"]
 [ext_resource type="Texture2D" uid="uid://diewhd2puo7v4" path="res://assets/Environment/player/BqBar.png" id="2_25rev"]
@@ -12,6 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://u0qrberc2wwv" path="res://assets/enemies/1/4.png" id="6_cp3q1"]
 [ext_resource type="Texture2D" uid="uid://bpf478olk18er" path="res://assets/Environment/status_icon/ataque.png" id="11_1o3la"]
 [ext_resource type="Texture2D" uid="uid://cm0o3sonrajcv" path="res://assets/Environment/status_icon/5814838.png" id="11_atkvk"]
+[ext_resource type="Script" path="res://scripts/action_ballon.gd" id="12_807o3"]
+[ext_resource type="Texture2D" uid="uid://csde01y82clmp" path="res://assets/Card Sprites/Minion/minion (2).png" id="13_ne3va"]
+[ext_resource type="Texture2D" uid="uid://bgwcfyp3kr1u8" path="res://assets/Environment/status_icon/block.png" id="15_uny2h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uy244"]
 
@@ -112,6 +115,20 @@ _data = {
 "hit": SubResource("Animation_e5awy")
 }
 
+[sub_resource type="LabelSettings" id="LabelSettings_vqcl5"]
+line_spacing = 0.0
+font = ExtResource("2_v7jh7")
+font_size = 12
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_c3egm"]
+line_spacing = 0.0
+font = ExtResource("2_v7jh7")
+font_size = 12
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
 [node name="BaseEnemy" type="CharacterBody2D" node_paths=PackedStringArray("health_bar", "health_bar_label", "animation", "modifiers_container") groups=["enemy"]]
 scale = Vector2(1.5, 1.5)
 script = ExtResource("1_ekd5x")
@@ -122,7 +139,12 @@ modifiers_container = NodePath("Modifiers")
 max_health = 100
 health = 100
 damage = 10
-actions = Array[String](["attack", "defense"])
+actions_list = Array[String](["attack", "defense", "poison"])
+actions_list_icons = {
+"attack": "res://assets/Environment/status_icon/ataque.png",
+"defense": "res://assets/Environment/status_icon/block.png",
+"poison": "res://assets/Environment/status_icon/poison.png"
+}
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 visible = false
@@ -204,8 +226,7 @@ offset_bottom = -74.6666
 theme_override_constants/separation = 10
 alignment = 1
 
-[node name="ActionBallon" type="TextureRect" parent="."]
-visible = false
+[node name="ActionBallon" type="TextureRect" parent="." node_paths=PackedStringArray("action_info")]
 self_modulate = Color(1, 1, 1, 0.588235)
 custom_minimum_size = Vector2(60, 60)
 offset_left = 33.3333
@@ -214,6 +235,8 @@ offset_right = 120.333
 offset_bottom = -59.6667
 texture = ExtResource("11_atkvk")
 expand_mode = 1
+script = ExtResource("12_807o3")
+action_info = NodePath("ActionInfo")
 
 [node name="Icon" type="TextureRect" parent="ActionBallon"]
 custom_minimum_size = Vector2(25, 25)
@@ -232,4 +255,70 @@ grow_vertical = 2
 texture = ExtResource("11_1o3la")
 expand_mode = 1
 
+[node name="ActionInfo" type="TextureRect" parent="ActionBallon"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.588235)
+custom_minimum_size = Vector2(193, 73)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -96.4998
+offset_top = -28.3333
+offset_right = 96.5002
+offset_bottom = 44.6667
+grow_horizontal = 2
+texture = ExtResource("13_ne3va")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="ActionBallon/ActionInfo"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.5
+offset_top = -19.5
+offset_right = 48.5
+offset_bottom = 19.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Recebe 5 de escudo"
+label_settings = SubResource("LabelSettings_vqcl5")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ShieldContainer" type="TextureRect" parent="."]
+visible = false
+custom_minimum_size = Vector2(35, 35)
+offset_left = -85.3334
+offset_top = -77.3333
+offset_right = -50.3334
+offset_bottom = -42.3333
+texture = ExtResource("15_uny2h")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="ShieldContainer"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -6.5
+offset_right = 0.5
+offset_bottom = 6.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "15"
+label_settings = SubResource("LabelSettings_c3egm")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
 [connection signal="animation_finished" from="AuxAnimation" to="." method="_on_aux_animation_animation_finished"]
+[connection signal="mouse_entered" from="ActionBallon" to="ActionBallon" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ActionBallon" to="ActionBallon" method="_on_mouse_exited"]

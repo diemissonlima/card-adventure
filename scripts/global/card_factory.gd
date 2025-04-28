@@ -9,7 +9,10 @@ var card_list: Dictionary = {
 	"envenenar": "res://scenes/cards/envenenar.tscn"
 }
 
-var icons: Dictionary = {
-	"attack": "res://assets/Environment/status_icon/ataque.png",
-	"defense": "res://assets/Environment/status_icon/block.png"
-}
+
+# intenções do inimigo aparecendo
+# caixa com informação da intencao do inimigo
+# valor de escudo do inimigo aparecendo para o jogador
+# bug de quando o inimigo morre ainda causa dano corrigido
+# intenção do inimigo de causar veneno adicionado
+# dano de veneno sendo causado ao player

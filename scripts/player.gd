@@ -63,7 +63,7 @@ func update_bar() -> void:
 	
 	hud.get_node("ShieldContainer/Label").text = str(shield)
 	if shield <= 0:
-		hud.get_node("ShieldContainer").hide()
+		hud.get_node("ShieldContainer").visible = false
 
 
 func update_label() -> void:
@@ -76,8 +76,8 @@ func send_deck_to_battlefield() -> void:
 	get_tree().call_group("player_hand", "get_player_deck", deck)
 
 
-func take_damage(value: int) -> void:
-	if shield > 0:
+func take_damage(value: int, type: String) -> void:
+	if shield > 0 and type == "physical":
 		if value <= shield:
 			shield -= value
 			update_bar()
@@ -95,22 +95,21 @@ func take_damage(value: int) -> void:
 
 
 func apply_status(type: String, value: int) -> void:
+	if type == "block":
+		shield += (value + defense)
+		hud.get_node("ShieldContainer").show()
+		hud.get_node("ShieldContainer/Label").text = str(shield)
+		return
+		
 	var status_instance
-	
 	if modifiers_container.get_child_count() <= 0:
 		match type:
 			"poison":
-				pass
+				status_instance = preload("res://scenes/status/poison.tscn")
 			
 			"paralyzed":
 				pass
-			
-			"block":
-				shield += (value + defense)
-				hud.get_node("ShieldContainer").show()
-				hud.get_node("ShieldContainer/Label").text = str(shield)
-				return
-		
+				
 		var status_scene = status_instance.instantiate()
 		status_scene.status_modifier = value
 		modifiers_container.add_child(status_scene)
@@ -121,6 +120,15 @@ func apply_status(type: String, value: int) -> void:
 		if status.status_name == type:
 			status.update_durability("increase")
 			break
+
+
+func apply_status_effect() -> void:
+	if modifiers_container.get_child_count() <= 0:
+		return
+		
+	for status in modifiers_container.get_children():
+		if status.status_name == "poison":
+			take_damage(15, "status")
 
 
 func update_status() -> void:

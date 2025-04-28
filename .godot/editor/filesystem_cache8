@@ -1,272 +1,273 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1745606066
-export_presets.cfg::TextFile::-1::1745507259::0::1::::<><>::
-icon.png::CompressedTexture2D::3366699946258356917::1745432678::1745432711::1::::<><>::
-::res://assets/::1745432678
-::res://assets/Card Sprites/::1745432678
-::res://assets/Card Sprites/_Card Back Elements/::1745432720
-_base full.png::CompressedTexture2D::3197808497505203647::1745432677::1745432713::1::::<><>::
-_base rough.png::CompressedTexture2D::2879874599938943947::1745432677::1745432713::1::::<><>::
-big decor (1).png::CompressedTexture2D::8293591396905394797::1745432677::1745432713::1::::<><>::
-big decor (2).png::CompressedTexture2D::7536524762815660029::1745432677::1745432713::1::::<><>::
-big decor (3).png::CompressedTexture2D::997708795456325347::1745432677::1745432713::1::::<><>::
-big decor (4).png::CompressedTexture2D::1363608200200501088::1745432677::1745432713::1::::<><>::
-big decor (5).png::CompressedTexture2D::2450761312477939535::1745432677::1745432713::1::::<><>::
-big decor (6).png::CompressedTexture2D::4537536539235581249::1745432677::1745432713::1::::<><>::
-big decor (7).png::CompressedTexture2D::7951722880703528922::1745432677::1745432713::1::::<><>::
-big decor (8).png::CompressedTexture2D::8493294100875380997::1745432677::1745432713::1::::<><>::
-corners (1).png::CompressedTexture2D::544319374735396171::1745432677::1745432714::1::::<><>::
-corners (2).png::CompressedTexture2D::7150068267265273069::1745432677::1745432714::1::::<><>::
-corners (3).png::CompressedTexture2D::8250856973332657125::1745432677::1745432714::1::::<><>::
-corners (4).png::CompressedTexture2D::6198991854076714536::1745432677::1745432714::1::::<><>::
-corners (5).png::CompressedTexture2D::8538722467293189239::1745432677::1745432714::1::::<><>::
-corners (6).png::CompressedTexture2D::2312692363831553027::1745432677::1745432714::1::::<><>::
-corners (7).png::CompressedTexture2D::2297567798729034166::1745432677::1745432714::1::::<><>::
-corners (8).png::CompressedTexture2D::5082787967980541862::1745432677::1745432714::1::::<><>::
-corners (9).png::CompressedTexture2D::9121150227368723113::1745432677::1745432715::1::::<><>::
-corners (10).png::CompressedTexture2D::315148005507881142::1745432677::1745432715::1::::<><>::
-corners (11).png::CompressedTexture2D::6311569427029260371::1745432677::1745432715::1::::<><>::
-corners (12).png::CompressedTexture2D::6680818418567904954::1745432677::1745432715::1::::<><>::
-corners (13).png::CompressedTexture2D::6479926054227338492::1745432677::1745432715::1::::<><>::
-corners (14).png::CompressedTexture2D::7079735679701210384::1745432677::1745432715::1::::<><>::
-corners (15).png::CompressedTexture2D::5597773408257577751::1745432677::1745432716::1::::<><>::
-corners (16).png::CompressedTexture2D::8104432025054484663::1745432677::1745432716::1::::<><>::
-corners (17).png::CompressedTexture2D::308439414989326894::1745432677::1745432716::1::::<><>::
-corners (18).png::CompressedTexture2D::9177212637377848232::1745432677::1745432716::1::::<><>::
-horizontal sides (1).png::CompressedTexture2D::7956634316509544253::1745432677::1745432712::1::::<><>::
-horizontal sides (2).png::CompressedTexture2D::3905168062172948442::1745432677::1745432712::1::::<><>::
-horizontal sides (3).png::CompressedTexture2D::7754980602772569364::1745432677::1745432712::1::::<><>::
-horizontal sides (4).png::CompressedTexture2D::462690130382530636::1745432677::1745432712::1::::<><>::
-horizontal sides (5).png::CompressedTexture2D::6923813969901961100::1745432677::1745432712::1::::<><>::
-horizontal sides (6).png::CompressedTexture2D::756855428690781123::1745432677::1745432712::1::::<><>::
-horizontal sides (7).png::CompressedTexture2D::7460500212044895478::1745432677::1745432712::1::::<><>::
-horizontal sides (8).png::CompressedTexture2D::3397089709770193540::1745432677::1745432712::1::::<><>::
-horizontal sides (9).png::CompressedTexture2D::8432032282514865312::1745432677::1745432712::1::::<><>::
-horizontal sides (10).png::CompressedTexture2D::2905448287316967599::1745432677::1745432712::1::::<><>::
-horizontal sides (11).png::CompressedTexture2D::2096608133869263446::1745432677::1745432712::1::::<><>::
-horizontal sides (12).png::CompressedTexture2D::6598419378620932651::1745432677::1745432712::1::::<><>::
-horizontal sides (13).png::CompressedTexture2D::1294318902121158231::1745432677::1745432712::1::::<><>::
-horizontal sides (14).png::CompressedTexture2D::8695161935425277567::1745432677::1745432712::1::::<><>::
-key crystal (1).png::CompressedTexture2D::7279563973174555679::1745432677::1745432712::1::::<><>::
-key crystal (2).png::CompressedTexture2D::6602774361778342214::1745432677::1745432712::1::::<><>::
-key crystal (3).png::CompressedTexture2D::1274827977145591824::1745432677::1745432712::1::::<><>::
-key crystal (4).png::CompressedTexture2D::7431016960588316151::1745432677::1745432712::1::::<><>::
-key crystal (5).png::CompressedTexture2D::4930129277801425421::1745432677::1745432712::1::::<><>::
-key crystal (6).png::CompressedTexture2D::4222882368546870228::1745432677::1745432712::1::::<><>::
-key emblem (1).png::CompressedTexture2D::7243380028017123688::1745432677::1745432712::1::::<><>::
-key emblem (2).png::CompressedTexture2D::1522763738499860730::1745432677::1745432712::1::::<><>::
-key emblem (3).png::CompressedTexture2D::4788775146295155810::1745432677::1745432712::1::::<><>::
-key emblem (4).png::CompressedTexture2D::1693941486937198226::1745432677::1745432712::1::::<><>::
-key emblem (5).png::CompressedTexture2D::9168415252640509395::1745432677::1745432712::1::::<><>::
-key emblem (6).png::CompressedTexture2D::3409500360510137379::1745432677::1745432712::1::::<><>::
-small decor (1).png::CompressedTexture2D::4246859867186678994::1745432677::1745432713::1::::<><>::
-small decor (2).png::CompressedTexture2D::974994327878211612::1745432677::1745432719::1::::<><>::
-small decor (3).png::CompressedTexture2D::8398197721647852866::1745432677::1745432719::1::::<><>::
-small decor (4).png::CompressedTexture2D::7280597321081856286::1745432677::1745432719::1::::<><>::
-small decor (5).png::CompressedTexture2D::7652651009604423506::1745432677::1745432719::1::::<><>::
-small decor (6).png::CompressedTexture2D::1989710805115732892::1745432678::1745432719::1::::<><>::
-small decor (7).png::CompressedTexture2D::7720533083415846250::1745432678::1745432719::1::::<><>::
-small decor (8).png::CompressedTexture2D::2764675807840757556::1745432678::1745432719::1::::<><>::
-small decor (9).png::CompressedTexture2D::3710782451318795921::1745432678::1745432719::1::::<><>::
-small decor (10).png::CompressedTexture2D::5588506681443000366::1745432677::1745432719::1::::<><>::
-small decor (11).png::CompressedTexture2D::1840783395058995897::1745432677::1745432719::1::::<><>::
-small decor (12).png::CompressedTexture2D::6709022516226611131::1745432677::1745432719::1::::<><>::
-small decor (13).png::CompressedTexture2D::7381869825420456123::1745432677::1745432719::1::::<><>::
-small decor (14).png::CompressedTexture2D::1213690464440531581::1745432677::1745432720::1::::<><>::
-small decor (15).png::CompressedTexture2D::1383701044841567267::1745432677::1745432720::1::::<><>::
-small decor (16).png::CompressedTexture2D::2988049823076821942::1745432677::1745432720::1::::<><>::
-vertical sides (1).png::CompressedTexture2D::274641407731164749::1745432678::1745432720::1::::<><>::
-vertical sides (2).png::CompressedTexture2D::4390448111498525580::1745432678::1745432720::1::::<><>::
-vertical sides (3).png::CompressedTexture2D::1250539727000858715::1745432678::1745432720::1::::<><>::
-vertical sides (4).png::CompressedTexture2D::5242988453545289509::1745432678::1745432720::1::::<><>::
-vertical sides (5).png::CompressedTexture2D::6897984648402693572::1745432678::1745432720::1::::<><>::
-vertical sides (6).png::CompressedTexture2D::7580992075868668294::1745432678::1745432720::1::::<><>::
-vertical sides (7).png::CompressedTexture2D::6726916745255802667::1745432678::1745432720::1::::<><>::
-vertical sides (8).png::CompressedTexture2D::8241123855294504966::1745432678::1745432720::1::::<><>::
-vertical sides (9).png::CompressedTexture2D::4487485841050053358::1745432678::1745432720::1::::<><>::
-vertical sides (10).png::CompressedTexture2D::7936943624640787281::1745432678::1745432720::1::::<><>::
-vertical sides (11).png::CompressedTexture2D::5382155492314216566::1745432678::1745432720::1::::<><>::
-vertical sides (12).png::CompressedTexture2D::4810525581701122556::1745432678::1745432720::1::::<><>::
-vertical sides (13).png::CompressedTexture2D::4774885306746405015::1745432678::1745432720::1::::<><>::
-vertical sides (14).png::CompressedTexture2D::7869029289076346460::1745432678::1745432716::1::::<><>::
-::res://assets/Card Sprites/_Emblem/::1745432716
-emblem (1).png::CompressedTexture2D::9132547755948344147::1745432678::1745432716::1::::<><>::
-emblem (2).png::CompressedTexture2D::2724149848654331944::1745432678::1745432716::1::::<><>::
-emblem (3).png::CompressedTexture2D::3498052924327674225::1745432678::1745432716::1::::<><>::
-emblem (4).png::CompressedTexture2D::2005992686764222243::1745432678::1745432716::1::::<><>::
-emblem (5).png::CompressedTexture2D::2240018109788302265::1745432678::1745432716::1::::<><>::
-emblem (6).png::CompressedTexture2D::8904257506229345105::1745432678::1745432716::1::::<><>::
-::res://assets/Card Sprites/_Rarity/::1745432716
-rarity (1).png::CompressedTexture2D::167330295747783093::1745432678::1745432716::1::::<><>::
-rarity (2).png::CompressedTexture2D::8775403298514170359::1745432678::1745432716::1::::<><>::
-rarity (3).png::CompressedTexture2D::9218217687021872459::1745432678::1745432716::1::::<><>::
-rarity (4).png::CompressedTexture2D::8553252953141431827::1745432678::1745432716::1::::<><>::
-rarity (5).png::CompressedTexture2D::616099588133769591::1745432678::1745432716::1::::<><>::
-rarity (6).png::CompressedTexture2D::3693481674640372035::1745432678::1745432716::1::::<><>::
-rarity (7).png::CompressedTexture2D::3207608153576682456::1745432678::1745432716::1::::<><>::
-rarity (8).png::CompressedTexture2D::5430542929856596559::1745432678::1745432716::1::::<><>::
-::res://assets/Card Sprites/Booster/::1745432716
-booster body smooth.png::CompressedTexture2D::1143596492044176594::1745432677::1745432716::1::::<><>::
-booster body wave.png::CompressedTexture2D::7550390071266256983::1745432677::1745432716::1::::<><>::
-::res://assets/Card Sprites/Card Back/::1745432719
-_cover.png::CompressedTexture2D::5730218869542738222::1745432677::1745432717::1::::<><>::
-_experimental (1).png::CompressedTexture2D::3387715815951092867::1745432677::1745432717::1::::<><>::
-_experimental (2).png::CompressedTexture2D::1734666384078955723::1745432677::1745432717::1::::<><>::
-_experimental (3).png::CompressedTexture2D::5998257821663090015::1745432677::1745432717::1::::<><>::
-_experimental (4).png::CompressedTexture2D::832448858817547552::1745432677::1745432718::1::::<><>::
-_experimental (5).png::CompressedTexture2D::3923074710227105726::1745432677::1745432718::1::::<><>::
-_experimental (6).png::CompressedTexture2D::1227332916392276948::1745432677::1745432718::1::::<><>::
-_experimental (7).png::CompressedTexture2D::2904569178846295605::1745432677::1745432718::1::::<><>::
-_experimental (8).png::CompressedTexture2D::3499981083463727990::1745432677::1745432719::1::::<><>::
-_experimental (9).png::CompressedTexture2D::2342366673186178543::1745432677::1745432719::1::::<><>::
-_experimental (10).png::CompressedTexture2D::2555438119224874086::1745432677::1745432705::1::::<><>::
-_experimental (11).png::CompressedTexture2D::938863332063304917::1745432677::1745432705::1::::<><>::
-_experimental (12).png::CompressedTexture2D::6873573077266002072::1745432677::1745432706::1::::<><>::
-contrast emblem (1).png::CompressedTexture2D::495680538399407823::1745432677::1745432706::1::::<><>::
-contrast emblem (2).png::CompressedTexture2D::957317786438515815::1745432677::1745432706::1::::<><>::
-contrast emblem (3).png::CompressedTexture2D::2346433436509718285::1745432677::1745432707::1::::<><>::
-contrast emblem (4).png::CompressedTexture2D::8138344869713093599::1745432677::1745432707::1::::<><>::
-crystal (1).png::CompressedTexture2D::6393136565093186271::1745432677::1745432707::1::::<><>::
-crystal (2).png::CompressedTexture2D::4889418009418094513::1745432677::1745432708::1::::<><>::
-crystal (3).png::CompressedTexture2D::2475363739350530754::1745432677::1745432708::1::::<><>::
-crystal (4).png::CompressedTexture2D::7152805418425279516::1745432677::1745432708::1::::<><>::
-crystal (5).png::CompressedTexture2D::4140529464044857559::1745432677::1745432708::1::::<><>::
-crystal (6).png::CompressedTexture2D::8188470517330532384::1745432677::1745432709::1::::<><>::
-neutral emblem (1).png::CompressedTexture2D::9048801593493460841::1745432677::1745432709::1::::<><>::
-neutral emblem (2).png::CompressedTexture2D::3708422160150864917::1745432677::1745432709::1::::<><>::
-neutral emblem (3).png::CompressedTexture2D::8829615754923286255::1745432677::1745432710::1::::<><>::
-neutral emblem (4).png::CompressedTexture2D::7715832284744837396::1745432677::1745432710::1::::<><>::
-::res://assets/Card Sprites/images/::1745432711
-armor1.png::CompressedTexture2D::6365326594424670429::1745432678::1745432709::1::::<><>::
-armor2.png::CompressedTexture2D::1704925221146514121::1745432678::1745432709::1::::<><>::
-axe1.png::CompressedTexture2D::8539867243098471806::1745432678::1745432709::1::::<><>::
-axe2.png::CompressedTexture2D::3594472615959209997::1745432678::1745432709::1::::<><>::
-axe3.png::CompressedTexture2D::8986131701762200072::1745432678::1745432709::1::::<><>::
-axeDouble1.png::CompressedTexture2D::6207520767784231967::1745432678::1745432709::1::::<><>::
-axeDouble2.png::CompressedTexture2D::1599420171593957291::1745432678::1745432710::1::::<><>::
-axeDouble3.png::CompressedTexture2D::7278643579652401630::1745432678::1745432710::1::::<><>::
-backpack.png::CompressedTexture2D::9044817253722486126::1745432678::1745432710::1::::<><>::
-bow1.png::CompressedTexture2D::6688975488325870718::1745432678::1745432705::1::::<><>::
-bow2.png::CompressedTexture2D::4779003603282589011::1745432678::1745432705::1::::<><>::
-coin.png::CompressedTexture2D::4721968360919398011::1745432678::1745432705::1::::<><>::
-dagger1.png::CompressedTexture2D::7339249535471961161::1745432678::1745432705::1::::<><>::
-dagger2.png::CompressedTexture2D::7456829092164427994::1745432678::1745432705::1::::<><>::
-envelope.png::CompressedTexture2D::4336508512618138809::1745432678::1745432705::1::::<><>::
-gemBlue.png::CompressedTexture2D::6572545989678601306::1745432678::1745432705::1::::<><>::
-gemGreen.png::CompressedTexture2D::121894422067302963::1745432678::1745432705::1::::<><>::
-gemRed.png::CompressedTexture2D::8232064263122815881::1745432678::1745432705::1::::<><>::
-hammer1.png::CompressedTexture2D::2775406388160013569::1745432678::1745432705::1::::<><>::
-hammer2.png::CompressedTexture2D::8653672857466432234::1745432678::1745432705::1::::<><>::
-heart.png::CompressedTexture2D::5176482291120143752::1745432678::1745432705::1::::<><>::
-helmet1.png::CompressedTexture2D::5589333126457866489::1745432678::1745432705::1::::<><>::
-helmet2.png::CompressedTexture2D::7740573127764331036::1745432678::1745432705::1::::<><>::
-map.png::CompressedTexture2D::7344157500673942334::1745432678::1745432705::1::::<><>::
-potionBlue.png::CompressedTexture2D::6115365743432100693::1745432678::1745432705::1::::<><>::
-potionGreen.png::CompressedTexture2D::4118453560549442815::1745432678::1745432705::1::::<><>::
-potionRed.png::CompressedTexture2D::4589197200788954954::1745432678::1745432705::1::::<><>::
-scroll.png::CompressedTexture2D::6062768097344635866::1745432678::1745432705::1::::<><>::
-shield1.png::CompressedTexture2D::4195610491736944232::1745432678::1745432705::1::::<><>::
-shield2.png::CompressedTexture2D::4959188494751745163::1745432678::1745432705::1::::<><>::
-shieldSmall1.png::CompressedTexture2D::2707309125538311229::1745432678::1745432705::1::::<><>::
-ShieldSmall2.png::CompressedTexture2D::5058881220329815202::1745432678::1745432705::1::::<><>::
-sword1.png::CompressedTexture2D::3635718150213606795::1745432678::1745432705::1::::<><>::
-sword2.png::CompressedTexture2D::8589789734561721176::1745432678::1745432705::1::::<><>::
-swordWood.png::CompressedTexture2D::277783141528465165::1745432678::1745432711::1::::<><>::
-tome.png::CompressedTexture2D::4498753587728487464::1745432678::1745432711::1::::<><>::
-tools.png::CompressedTexture2D::4186581003394506589::1745432678::1745432711::1::::<><>::
-upg_spear.png::CompressedTexture2D::7944092799548748336::1745432678::1745432711::1::::<><>::
-wand1.png::CompressedTexture2D::7588153154420427751::1745432678::1745432711::1::::<><>::
-wand2.png::CompressedTexture2D::8735341959912828438::1745432678::1745432711::1::::<><>::
-::res://assets/Card Sprites/Minion/::1745432712
-Alternate (1).png::CompressedTexture2D::1578177556675704614::1745432677::1745432711::1::::<><>::
-Alternate (2).png::CompressedTexture2D::2284248557218087515::1745432677::1745432711::1::::<><>::
-Alternate (3).png::CompressedTexture2D::2969746754403584540::1745432677::1745432711::1::::<><>::
-bg_card.png::CompressedTexture2D::1132223879878125468::1745432677::1745432711::1::::<><>::
-minion (1).png::CompressedTexture2D::1258593199977324802::1745432677::1745432711::1::::<><>::
-minion (2).png::CompressedTexture2D::6042722603169604147::1745432677::1745432711::1::::<><>::
-minion (3).png::CompressedTexture2D::3389399499340691495::1745432677::1745432711::1::::<><>::
-minion (4).png::CompressedTexture2D::3656773942171706766::1745432677::1745432711::1::::<><>::
-minion (5).png::CompressedTexture2D::3782225873473364030::1745432677::1745432711::1::::<><>::
-minion (6).png::CompressedTexture2D::5468454027794543858::1745432677::1745432712::1::::<><>::
-minion (7).png::CompressedTexture2D::5986396247701886057::1745432677::1745432711::1::::<><>::
-minion (8).png::CompressedTexture2D::3513313904119154387::1745432677::1745432712::1::::<><>::
-::res://assets/enemies/::1745432678
-::res://assets/enemies/1/::1745432712
-1.png::CompressedTexture2D::692374130605024691::1745432678::1745432711::1::::<><>::
-2.png::CompressedTexture2D::4530638725444937371::1745432678::1745432712::1::::<><>::
-3.png::CompressedTexture2D::8950262378196590729::1745432678::1745432712::1::::<><>::
-4.png::CompressedTexture2D::1456388206471518833::1745432678::1745432712::1::::<><>::
-::res://assets/Environment/::1745432711
-2.png::CompressedTexture2D::1698013890953423856::1745432678::1745432711::1::::<><>::
-17.png::CompressedTexture2D::4665155396681327243::1745432678::1745432711::1::::<><>::
-::res://assets/Environment/player/::1745440256
-Avatar.png::CompressedTexture2D::192575555813903545::1745432678::1745432712::1::::<><>::
-AvatarCircle.png::CompressedTexture2D::4388389058952896045::1745432678::1745432712::1::::<><>::
-BarHealth.png::CompressedTexture2D::3536090115695515948::1745432678::1745432712::1::::<><>::
-BarMana.png::CompressedTexture2D::3490744331358121725::1745432678::1745432712::1::::<><>::
-Border.png::CompressedTexture2D::5465919928813275468::1745432678::1745432710::1::::<><>::
-BqBar.png::CompressedTexture2D::7730378785586613559::1745432678::1745432710::1::::<><>::
-cursor.png::CompressedTexture2D::8932795528287130213::1745440255::1745440256::1::::<><>::
-Overlay Border + Overlay Level.png::CompressedTexture2D::6496542390290921737::1745432678::1745432710::1::::<><>::
-Overlay Border.png::CompressedTexture2D::1580591519610173549::1745432678::1745432710::1::::<><>::
-Overlay Level.png::CompressedTexture2D::579405723710214717::1745432678::1745432710::1::::<><>::
-paladin minion.png::CompressedTexture2D::3218681982032289931::1745432678::1745432710::1::::<><>::
-ProgressBar02.png::CompressedTexture2D::2806674053003638989::1745432678::1745432710::1::::<><>::
-ProgressBar03.png::CompressedTexture2D::5451469549381151168::1745432678::1745432710::1::::<><>::
-ProgressBar04.png::CompressedTexture2D::3923140206706598169::1745432678::1745432710::1::::<><>::
-::res://assets/Environment/status_icon/::1745617589
-5814838.png::CompressedTexture2D::5667617942683105837::1745617589::1745617590::1::::<><>::
-ataque.png::CompressedTexture2D::3451394920641099629::1745432678::1745432710::1::::<><>::
-attack.png::CompressedTexture2D::64698668490235163::1745432678::1745432710::1::::<><>::
-bleed.png::CompressedTexture2D::1612616348393731685::1745432678::1745432710::1::::<><>::
-block1.png::CompressedTexture2D::6543730730705413505::1745432678::1745432710::1::::<><>::
-block.png::CompressedTexture2D::2853101704084391705::1745432678::1745432710::1::::<><>::
-buff.png::CompressedTexture2D::7823305889362491743::1745432678::1745432710::1::::<><>::
-critico.png::CompressedTexture2D::8750475478798102509::1745432678::1745432710::1::::<><>::
-debuff.png::CompressedTexture2D::6299410464275755706::1745432678::1745432711::1::::<><>::
-defense.png::CompressedTexture2D::5284082223300753940::1745432678::1745432710::1::::<><>::
-escudo.png::CompressedTexture2D::8538424563591710231::1745432678::1745432710::1::::<><>::
-paralysis.png::CompressedTexture2D::5489261344528897911::1745432678::1745432711::1::::<><>::
-paralyzed.png::CompressedTexture2D::7617623180303808812::1745432678::1745432710::1::::<><>::
-poison.png::CompressedTexture2D::1332240443692993547::1745432678::1745432711::1::::<><>::
-upar.png::CompressedTexture2D::2834025195107827133::1745432678::1745432711::1::::<><>::
-::res://assets/font/::1745432705
-BEATTECH-Line.ttf::FontFile::856878379281082797::1745432678::1745432705::1::::<><>::
-BEATTECH.ttf::FontFile::4884158896143978648::1745432678::1745432705::1::::<><>::
-Berry Rotunda.ttf::FontFile::4801460953499636392::1745432678::1745432705::1::::<><>::
-digital-7 (italic).ttf::FontFile::4192248559547078270::1745432678::1745432705::1::::<><>::
-digital-7.ttf::FontFile::5894394784383882134::1745432678::1745432705::1::::<><>::
-njo_14.ttf::FontFile::4887497226440841355::1745432678::1745432705::1::::<><>::
-Pixelmania.ttf::FontFile::5028974822233807650::1745432678::1745432705::1::::<><>::
-::res://scenes/::1745432678
-::res://scenes/cards/::1745617430
-bloquear.tscn::PackedScene::1824676878326023463::1745617430::0::1::::<><>::uid://bjekvwsvl0b1h::::res://scenes/cards/card_base.tscn<>uid://7srifpev2ue2::::res://assets/Card Sprites/Minion/Alternate (2).png<>uid://b01ndeeun3a61::::res://assets/Card Sprites/images/shield1.png<>uid://cnb511x6opq0::::res://assets/Card Sprites/_Rarity/rarity (1).png
-card_base.gdshader::Shader::-1::1745617430::0::1::::<><>::
-card_base.tscn::PackedScene::3027023643341309975::1745617429::0::1::::<><>::uid://r6w31d608bf3::::res://assets/Card Sprites/Minion/minion (1).png<>res://scripts/card_base.gd<>uid://bt5eyb6ngcxic::::res://assets/Card Sprites/Minion/minion (5).png<>uid://crj4co0h4s6wb::::res://assets/Card Sprites/Minion/minion (7).png<>uid://cbvsmohw8mlwd::::res://assets/font/njo_14.ttf<>res://scenes/cards/card_base.gdshader<>uid://cj57vys2hswus::::res://assets/Card Sprites/Minion/minion (6).png<>uid://csde01y82clmp::::res://assets/Card Sprites/Minion/minion (2).png<>uid://boj36dh0anhjr::::res://assets/Card Sprites/Minion/minion (3).png
-corte.tscn::PackedScene::4758819965376774766::1745617430::0::1::::<><>::uid://bjekvwsvl0b1h::::res://scenes/cards/card_base.tscn<>uid://biktkbg7nnsp5::::res://assets/Card Sprites/Minion/Alternate (3).png<>uid://br2f0nihrdnvf::::res://assets/Card Sprites/images/sword1.png<>uid://cnb511x6opq0::::res://assets/Card Sprites/_Rarity/rarity (1).png
-corte_diagonal.tscn::PackedScene::4047970959125073199::1745617430::0::1::::<><>::uid://bjekvwsvl0b1h::::res://scenes/cards/card_base.tscn<>uid://biktkbg7nnsp5::::res://assets/Card Sprites/Minion/Alternate (3).png<>uid://dum7t1y0br321::::res://assets/Card Sprites/images/sword2.png<>uid://cnb511x6opq0::::res://assets/Card Sprites/_Rarity/rarity (1).png
-corte_tornado.tscn::PackedScene::5632831324463868351::1745617430::0::1::::<><>::uid://bjekvwsvl0b1h::::res://scenes/cards/card_base.tscn<>uid://biktkbg7nnsp5::::res://assets/Card Sprites/Minion/Alternate (3).png<>uid://dbx3gw7x3xrra::::res://assets/Card Sprites/images/axeDouble3.png
-envenenar.tscn::PackedScene::8936077668959949300::1745617430::0::1::::<><>::uid://bjekvwsvl0b1h::::res://scenes/cards/card_base.tscn<>uid://wqqma8eb720y::::res://assets/Card Sprites/Minion/Alternate (1).png<>uid://byxalfwtbesqh::::res://assets/Card Sprites/images/potionGreen.png<>uid://cnb511x6opq0::::res://assets/Card Sprites/_Rarity/rarity (1).png
-utilidade_2.tscn::PackedScene::3457011007510600477::1745432678::0::1::::<><>::uid://bjekvwsvl0b1h::::res://scenes/cards/card_base.tscn<>uid://wqqma8eb720y::::res://assets/Card Sprites/Minion/Alternate (1).png<>uid://s8l2nd8xm300::::res://assets/Environment/status_icon/poison.png<>uid://cnb511x6opq0::::res://assets/Card Sprites/_Rarity/rarity (1).png
-::res://scenes/enemies/::1745617430
-base_enemy.tscn::PackedScene::4509990845810513577::1745617430::0::1::::<><>::res://scripts/base_enemy.gd<>uid://diewhd2puo7v4::::res://assets/Environment/player/BqBar.png<>uid://cbvsmohw8mlwd::::res://assets/font/njo_14.ttf<>uid://j4nkhxvbodf4::::res://assets/enemies/1/1.png<>uid://cj4y5xpvhwuwq::::res://assets/Environment/player/Border.png<>uid://b5sw7tki2sa72::::res://assets/enemies/1/2.png<>uid://bv5nstha4sxev::::res://assets/Environment/player/ProgressBar04.png<>uid://d0rtrp4hpvo2d::::res://assets/enemies/1/3.png<>uid://d0jd3p4nq6cd6::::res://assets/Environment/player/cursor.png<>uid://u0qrberc2wwv::::res://assets/enemies/1/4.png<>uid://c03106a3fw2w2::::res://assets/Environment/status_icon/dialog_ballon.png
-::res://scenes/enviroment/::1745617430
-battlefield.tscn::PackedScene::5231330632624559576::1745617429::0::1::::<><>::res://scripts/battlefield.gd<>uid://b5iw5jg31baab::::res://scenes/enemies/base_enemy.tscn<>uid://ygsbnbykkuwe::::res://assets/Environment/2.png<>uid://5wkrskl1xh3u::::res://scenes/enviroment/player.tscn<>uid://cp13lbvmsx8ob::::res://scenes/enviroment/hud.tscn<>res://scripts/player_hand.gd<>uid://cnv04q6uj5cda::::res://assets/Card Sprites/Card Back/_cover.png<>uid://cbvsmohw8mlwd::::res://assets/font/njo_14.ttf
-hud.gdshader::Shader::-1::1745617430::0::1::::<><>::
-hud.tscn::PackedScene::5881067648627121529::1745617430::0::1::::<><>::uid://diewhd2puo7v4::::res://assets/Environment/player/BqBar.png<>uid://cj4y5xpvhwuwq::::res://assets/Environment/player/Border.png<>uid://bv5nstha4sxev::::res://assets/Environment/player/ProgressBar04.png<>uid://cbvsmohw8mlwd::::res://assets/font/njo_14.ttf<>uid://cjwy53rckchoy::::res://assets/Environment/player/ProgressBar03.png<>res://scenes/enviroment/hud.gdshader<>uid://bl4fhsvbs60mx::::res://assets/Environment/player/paladin minion.png<>uid://b3r1ekn3aeoif::::res://assets/Environment/player/AvatarCircle.png<>uid://wrwd11qyuvhl::::res://assets/Environment/player/Overlay Border.png<>uid://bgwcfyp3kr1u8::::res://assets/Environment/status_icon/block.png<>uid://bpf478olk18er::::res://assets/Environment/status_icon/ataque.png<>uid://dtwcutqgc1njb::::res://assets/Environment/status_icon/escudo.png
-player.tscn::PackedScene::2151720109558128672::1745617430::0::1::::<><>::res://scripts/player.gd
-::res://scenes/status/::1745607281
-base_status.tscn::PackedScene::1403753546779760507::1745432678::0::1::::<><>::res://scripts/base_status.gd<>uid://s8l2nd8xm300::::res://assets/Environment/status_icon/poison.png<>uid://cbvsmohw8mlwd::::res://assets/font/njo_14.ttf
-bleed.tscn::PackedScene::8240155159459942147::1745432678::0::1::::<><>::uid://t88u65mpnlst::::res://scenes/status/base_status.tscn
-block.tscn::PackedScene::2219046973750843446::1745607281::0::1::::<><>::uid://t88u65mpnlst::::res://scenes/status/base_status.tscn<>uid://c0h3j3ge7ggq0::::res://assets/Environment/status_icon/block1.png
-paralyzed.tscn::PackedScene::2509592901640009510::1745432678::0::1::::<><>::uid://t88u65mpnlst::::res://scenes/status/base_status.tscn
-poison.tscn::PackedScene::8671969979722627433::1745607281::0::1::::<><>::uid://t88u65mpnlst::::res://scenes/status/base_status.tscn
-::res://scripts/::1745611055
-base_enemy.gd::GDScript::-1::1745608351::0::1::::BaseEnemy<>CharacterBody2D<>::
-base_status.gd::GDScript::-1::1745432678::0::1::::BaseStatus<>TextureRect<>::
-battlefield.gd::GDScript::-1::1745608807::0::1::::Battlefield<>Control<>::
-card_base.gd::GDScript::-1::1745505932::0::1::::CardBase<>Control<>::
-player.gd::GDScript::-1::1745611055::0::1::::Player<>Node<>::
-player_hand.gd::GDScript::-1::1745608970::0::1::::PlayerHand<>HBoxContainer<>::
-::res://scripts/global/::1745505962
-card_factory.gd::GDScript::-1::1745505962::0::1::::CardList<>Node<>::
+::res://::1745775403
+export_presets.cfg::TextFile::-1::1745710911::0::1::::<><>::
+icon.png::CompressedTexture2D::3366699946258356917::1745640146::1745705134::1::::<><>::
+::res://assets/::1745640146
+::res://assets/Card Sprites/::1745640146
+::res://assets/Card Sprites/_Card Back Elements/::1745705146
+_base full.png::CompressedTexture2D::3197808497505203647::1745640145::1745705137::1::::<><>::
+_base rough.png::CompressedTexture2D::2879874599938943947::1745640145::1745705137::1::::<><>::
+big decor (1).png::CompressedTexture2D::8293591396905394797::1745640145::1745705137::1::::<><>::
+big decor (2).png::CompressedTexture2D::7536524762815660029::1745640145::1745705137::1::::<><>::
+big decor (3).png::CompressedTexture2D::997708795456325347::1745640145::1745705137::1::::<><>::
+big decor (4).png::CompressedTexture2D::1363608200200501088::1745640145::1745705138::1::::<><>::
+big decor (5).png::CompressedTexture2D::2450761312477939535::1745640145::1745705138::1::::<><>::
+big decor (6).png::CompressedTexture2D::4537536539235581249::1745640145::1745705138::1::::<><>::
+big decor (7).png::CompressedTexture2D::7951722880703528922::1745640145::1745705138::1::::<><>::
+big decor (8).png::CompressedTexture2D::8493294100875380997::1745640145::1745705138::1::::<><>::
+corners (1).png::CompressedTexture2D::544319374735396171::1745640145::1745705138::1::::<><>::
+corners (2).png::CompressedTexture2D::7150068267265273069::1745640145::1745705138::1::::<><>::
+corners (3).png::CompressedTexture2D::8250856973332657125::1745640145::1745705139::1::::<><>::
+corners (4).png::CompressedTexture2D::6198991854076714536::1745640146::1745705139::1::::<><>::
+corners (5).png::CompressedTexture2D::8538722467293189239::1745640146::1745705139::1::::<><>::
+corners (6).png::CompressedTexture2D::2312692363831553027::1745640146::1745705139::1::::<><>::
+corners (7).png::CompressedTexture2D::2297567798729034166::1745640146::1745705139::1::::<><>::
+corners (8).png::CompressedTexture2D::5082787967980541862::1745640146::1745705139::1::::<><>::
+corners (9).png::CompressedTexture2D::9121150227368723113::1745640146::1745705140::1::::<><>::
+corners (10).png::CompressedTexture2D::315148005507881142::1745640145::1745705140::1::::<><>::
+corners (11).png::CompressedTexture2D::6311569427029260371::1745640145::1745705140::1::::<><>::
+corners (12).png::CompressedTexture2D::6680818418567904954::1745640145::1745705140::1::::<><>::
+corners (13).png::CompressedTexture2D::6479926054227338492::1745640145::1745705140::1::::<><>::
+corners (14).png::CompressedTexture2D::7079735679701210384::1745640145::1745705140::1::::<><>::
+corners (15).png::CompressedTexture2D::5597773408257577751::1745640145::1745705141::1::::<><>::
+corners (16).png::CompressedTexture2D::8104432025054484663::1745640145::1745705140::1::::<><>::
+corners (17).png::CompressedTexture2D::308439414989326894::1745640145::1745705141::1::::<><>::
+corners (18).png::CompressedTexture2D::9177212637377848232::1745640145::1745705141::1::::<><>::
+horizontal sides (1).png::CompressedTexture2D::7956634316509544253::1745640146::1745705136::1::::<><>::
+horizontal sides (2).png::CompressedTexture2D::3905168062172948442::1745640146::1745705136::1::::<><>::
+horizontal sides (3).png::CompressedTexture2D::7754980602772569364::1745640146::1745705136::1::::<><>::
+horizontal sides (4).png::CompressedTexture2D::462690130382530636::1745640146::1745705136::1::::<><>::
+horizontal sides (5).png::CompressedTexture2D::6923813969901961100::1745640146::1745705136::1::::<><>::
+horizontal sides (6).png::CompressedTexture2D::756855428690781123::1745640146::1745705136::1::::<><>::
+horizontal sides (7).png::CompressedTexture2D::7460500212044895478::1745640146::1745705136::1::::<><>::
+horizontal sides (8).png::CompressedTexture2D::3397089709770193540::1745640146::1745705136::1::::<><>::
+horizontal sides (9).png::CompressedTexture2D::8432032282514865312::1745640146::1745705136::1::::<><>::
+horizontal sides (10).png::CompressedTexture2D::2905448287316967599::1745640146::1745705136::1::::<><>::
+horizontal sides (11).png::CompressedTexture2D::2096608133869263446::1745640146::1745705136::1::::<><>::
+horizontal sides (12).png::CompressedTexture2D::6598419378620932651::1745640146::1745705136::1::::<><>::
+horizontal sides (13).png::CompressedTexture2D::1294318902121158231::1745640146::1745705137::1::::<><>::
+horizontal sides (14).png::CompressedTexture2D::8695161935425277567::1745640146::1745705137::1::::<><>::
+key crystal (1).png::CompressedTexture2D::7279563973174555679::1745640146::1745705137::1::::<><>::
+key crystal (2).png::CompressedTexture2D::6602774361778342214::1745640146::1745705137::1::::<><>::
+key crystal (3).png::CompressedTexture2D::1274827977145591824::1745640146::1745705137::1::::<><>::
+key crystal (4).png::CompressedTexture2D::7431016960588316151::1745640146::1745705137::1::::<><>::
+key crystal (5).png::CompressedTexture2D::4930129277801425421::1745640146::1745705137::1::::<><>::
+key crystal (6).png::CompressedTexture2D::4222882368546870228::1745640146::1745705137::1::::<><>::
+key emblem (1).png::CompressedTexture2D::7243380028017123688::1745640146::1745705137::1::::<><>::
+key emblem (2).png::CompressedTexture2D::1522763738499860730::1745640146::1745705137::1::::<><>::
+key emblem (3).png::CompressedTexture2D::4788775146295155810::1745640146::1745705137::1::::<><>::
+key emblem (4).png::CompressedTexture2D::1693941486937198226::1745640146::1745705137::1::::<><>::
+key emblem (5).png::CompressedTexture2D::9168415252640509395::1745640146::1745705137::1::::<><>::
+key emblem (6).png::CompressedTexture2D::3409500360510137379::1745640146::1745705137::1::::<><>::
+small decor (1).png::CompressedTexture2D::4246859867186678994::1745640146::1745705137::1::::<><>::
+small decor (2).png::CompressedTexture2D::974994327878211612::1745640146::1745705145::1::::<><>::
+small decor (3).png::CompressedTexture2D::8398197721647852866::1745640146::1745705145::1::::<><>::
+small decor (4).png::CompressedTexture2D::7280597321081856286::1745640146::1745705145::1::::<><>::
+small decor (5).png::CompressedTexture2D::7652651009604423506::1745640146::1745705145::1::::<><>::
+small decor (6).png::CompressedTexture2D::1989710805115732892::1745640146::1745705145::1::::<><>::
+small decor (7).png::CompressedTexture2D::7720533083415846250::1745640146::1745705145::1::::<><>::
+small decor (8).png::CompressedTexture2D::2764675807840757556::1745640146::1745705145::1::::<><>::
+small decor (9).png::CompressedTexture2D::3710782451318795921::1745640146::1745705145::1::::<><>::
+small decor (10).png::CompressedTexture2D::5588506681443000366::1745640146::1745705145::1::::<><>::
+small decor (11).png::CompressedTexture2D::1840783395058995897::1745640146::1745705145::1::::<><>::
+small decor (12).png::CompressedTexture2D::6709022516226611131::1745640146::1745705145::1::::<><>::
+small decor (13).png::CompressedTexture2D::7381869825420456123::1745640146::1745705145::1::::<><>::
+small decor (14).png::CompressedTexture2D::1213690464440531581::1745640146::1745705146::1::::<><>::
+small decor (15).png::CompressedTexture2D::1383701044841567267::1745640146::1745705146::1::::<><>::
+small decor (16).png::CompressedTexture2D::2988049823076821942::1745640146::1745705146::1::::<><>::
+vertical sides (1).png::CompressedTexture2D::274641407731164749::1745640146::1745705146::1::::<><>::
+vertical sides (2).png::CompressedTexture2D::4390448111498525580::1745640146::1745705146::1::::<><>::
+vertical sides (3).png::CompressedTexture2D::1250539727000858715::1745640146::1745705146::1::::<><>::
+vertical sides (4).png::CompressedTexture2D::5242988453545289509::1745640146::1745705146::1::::<><>::
+vertical sides (5).png::CompressedTexture2D::6897984648402693572::1745640146::1745705146::1::::<><>::
+vertical sides (6).png::CompressedTexture2D::7580992075868668294::1745640146::1745705146::1::::<><>::
+vertical sides (7).png::CompressedTexture2D::6726916745255802667::1745640146::1745705146::1::::<><>::
+vertical sides (8).png::CompressedTexture2D::8241123855294504966::1745640146::1745705146::1::::<><>::
+vertical sides (9).png::CompressedTexture2D::4487485841050053358::1745640146::1745705146::1::::<><>::
+vertical sides (10).png::CompressedTexture2D::7936943624640787281::1745640146::1745705146::1::::<><>::
+vertical sides (11).png::CompressedTexture2D::5382155492314216566::1745640146::1745705146::1::::<><>::
+vertical sides (12).png::CompressedTexture2D::4810525581701122556::1745640146::1745705146::1::::<><>::
+vertical sides (13).png::CompressedTexture2D::4774885306746405015::1745640146::1745705146::1::::<><>::
+vertical sides (14).png::CompressedTexture2D::7869029289076346460::1745640146::1745705141::1::::<><>::
+::res://assets/Card Sprites/_Emblem/::1745705141
+emblem (1).png::CompressedTexture2D::9132547755948344147::1745640146::1745705141::1::::<><>::
+emblem (2).png::CompressedTexture2D::2724149848654331944::1745640146::1745705141::1::::<><>::
+emblem (3).png::CompressedTexture2D::3498052924327674225::1745640146::1745705141::1::::<><>::
+emblem (4).png::CompressedTexture2D::2005992686764222243::1745640146::1745705141::1::::<><>::
+emblem (5).png::CompressedTexture2D::2240018109788302265::1745640146::1745705141::1::::<><>::
+emblem (6).png::CompressedTexture2D::8904257506229345105::1745640146::1745705141::1::::<><>::
+::res://assets/Card Sprites/_Rarity/::1745705141
+rarity (1).png::CompressedTexture2D::167330295747783093::1745640146::1745705141::1::::<><>::
+rarity (2).png::CompressedTexture2D::8775403298514170359::1745640146::1745705141::1::::<><>::
+rarity (3).png::CompressedTexture2D::9218217687021872459::1745640146::1745705141::1::::<><>::
+rarity (4).png::CompressedTexture2D::8553252953141431827::1745640146::1745705141::1::::<><>::
+rarity (5).png::CompressedTexture2D::616099588133769591::1745640146::1745705141::1::::<><>::
+rarity (6).png::CompressedTexture2D::3693481674640372035::1745640146::1745705141::1::::<><>::
+rarity (7).png::CompressedTexture2D::3207608153576682456::1745640146::1745705141::1::::<><>::
+rarity (8).png::CompressedTexture2D::5430542929856596559::1745640146::1745705141::1::::<><>::
+::res://assets/Card Sprites/Booster/::1745705142
+booster body smooth.png::CompressedTexture2D::1143596492044176594::1745640145::1745705141::1::::<><>::
+booster body wave.png::CompressedTexture2D::7550390071266256983::1745640145::1745705142::1::::<><>::
+::res://assets/Card Sprites/Card Back/::1745705145
+_cover.png::CompressedTexture2D::5730218869542738222::1745640145::1745705142::1::::<><>::
+_experimental (1).png::CompressedTexture2D::3387715815951092867::1745640145::1745705142::1::::<><>::
+_experimental (2).png::CompressedTexture2D::1734666384078955723::1745640145::1745705142::1::::<><>::
+_experimental (3).png::CompressedTexture2D::5998257821663090015::1745640145::1745705143::1::::<><>::
+_experimental (4).png::CompressedTexture2D::832448858817547552::1745640145::1745705143::1::::<><>::
+_experimental (5).png::CompressedTexture2D::3923074710227105726::1745640145::1745705143::1::::<><>::
+_experimental (6).png::CompressedTexture2D::1227332916392276948::1745640145::1745705143::1::::<><>::
+_experimental (7).png::CompressedTexture2D::2904569178846295605::1745640145::1745705144::1::::<><>::
+_experimental (8).png::CompressedTexture2D::3499981083463727990::1745640145::1745705144::1::::<><>::
+_experimental (9).png::CompressedTexture2D::2342366673186178543::1745640145::1745705144::1::::<><>::
+_experimental (10).png::CompressedTexture2D::2555438119224874086::1745640145::1745705145::1::::<><>::
+_experimental (11).png::CompressedTexture2D::938863332063304917::1745640145::1745705128::1::::<><>::
+_experimental (12).png::CompressedTexture2D::6873573077266002072::1745640145::1745705129::1::::<><>::
+contrast emblem (1).png::CompressedTexture2D::495680538399407823::1745640145::1745705129::1::::<><>::
+contrast emblem (2).png::CompressedTexture2D::957317786438515815::1745640145::1745705129::1::::<><>::
+contrast emblem (3).png::CompressedTexture2D::2346433436509718285::1745640145::1745705130::1::::<><>::
+contrast emblem (4).png::CompressedTexture2D::8138344869713093599::1745640145::1745705130::1::::<><>::
+crystal (1).png::CompressedTexture2D::6393136565093186271::1745640145::1745705130::1::::<><>::
+crystal (2).png::CompressedTexture2D::4889418009418094513::1745640145::1745705131::1::::<><>::
+crystal (3).png::CompressedTexture2D::2475363739350530754::1745640145::1745705131::1::::<><>::
+crystal (4).png::CompressedTexture2D::7152805418425279516::1745640145::1745705131::1::::<><>::
+crystal (5).png::CompressedTexture2D::4140529464044857559::1745640145::1745705132::1::::<><>::
+crystal (6).png::CompressedTexture2D::8188470517330532384::1745640145::1745705132::1::::<><>::
+neutral emblem (1).png::CompressedTexture2D::9048801593493460841::1745640145::1745705132::1::::<><>::
+neutral emblem (2).png::CompressedTexture2D::3708422160150864917::1745640145::1745705133::1::::<><>::
+neutral emblem (3).png::CompressedTexture2D::8829615754923286255::1745640145::1745705133::1::::<><>::
+neutral emblem (4).png::CompressedTexture2D::7715832284744837396::1745640145::1745705133::1::::<><>::
+::res://assets/Card Sprites/images/::1745705134
+armor1.png::CompressedTexture2D::6365326594424670429::1745640146::1745705133::1::::<><>::
+armor2.png::CompressedTexture2D::1704925221146514121::1745640146::1745705133::1::::<><>::
+axe1.png::CompressedTexture2D::8539867243098471806::1745640146::1745705133::1::::<><>::
+axe2.png::CompressedTexture2D::3594472615959209997::1745640146::1745705133::1::::<><>::
+axe3.png::CompressedTexture2D::8986131701762200072::1745640146::1745705133::1::::<><>::
+axeDouble1.png::CompressedTexture2D::6207520767784231967::1745640146::1745705133::1::::<><>::
+axeDouble2.png::CompressedTexture2D::1599420171593957291::1745640146::1745705133::1::::<><>::
+axeDouble3.png::CompressedTexture2D::7278643579652401630::1745640146::1745705133::1::::<><>::
+backpack.png::CompressedTexture2D::9044817253722486126::1745640146::1745705133::1::::<><>::
+bow1.png::CompressedTexture2D::6688975488325870718::1745640146::1745705133::1::::<><>::
+bow2.png::CompressedTexture2D::4779003603282589011::1745640146::1745705127::1::::<><>::
+coin.png::CompressedTexture2D::4721968360919398011::1745640146::1745705127::1::::<><>::
+dagger1.png::CompressedTexture2D::7339249535471961161::1745640146::1745705127::1::::<><>::
+dagger2.png::CompressedTexture2D::7456829092164427994::1745640146::1745705127::1::::<><>::
+envelope.png::CompressedTexture2D::4336508512618138809::1745640146::1745705127::1::::<><>::
+gemBlue.png::CompressedTexture2D::6572545989678601306::1745640146::1745705127::1::::<><>::
+gemGreen.png::CompressedTexture2D::121894422067302963::1745640146::1745705127::1::::<><>::
+gemRed.png::CompressedTexture2D::8232064263122815881::1745640146::1745705127::1::::<><>::
+hammer1.png::CompressedTexture2D::2775406388160013569::1745640146::1745705127::1::::<><>::
+hammer2.png::CompressedTexture2D::8653672857466432234::1745640146::1745705127::1::::<><>::
+heart.png::CompressedTexture2D::5176482291120143752::1745640146::1745705127::1::::<><>::
+helmet1.png::CompressedTexture2D::5589333126457866489::1745640146::1745705127::1::::<><>::
+helmet2.png::CompressedTexture2D::7740573127764331036::1745640146::1745705127::1::::<><>::
+map.png::CompressedTexture2D::7344157500673942334::1745640146::1745705127::1::::<><>::
+potionBlue.png::CompressedTexture2D::6115365743432100693::1745640146::1745705127::1::::<><>::
+potionGreen.png::CompressedTexture2D::4118453560549442815::1745640146::1745705127::1::::<><>::
+potionRed.png::CompressedTexture2D::4589197200788954954::1745640146::1745705127::1::::<><>::
+scroll.png::CompressedTexture2D::6062768097344635866::1745640146::1745705127::1::::<><>::
+shield1.png::CompressedTexture2D::4195610491736944232::1745640146::1745705127::1::::<><>::
+shield2.png::CompressedTexture2D::4959188494751745163::1745640146::1745705127::1::::<><>::
+shieldSmall1.png::CompressedTexture2D::2707309125538311229::1745640146::1745705128::1::::<><>::
+ShieldSmall2.png::CompressedTexture2D::5058881220329815202::1745640146::1745705128::1::::<><>::
+sword1.png::CompressedTexture2D::3635718150213606795::1745640146::1745705128::1::::<><>::
+sword2.png::CompressedTexture2D::8589789734561721176::1745640146::1745705128::1::::<><>::
+swordWood.png::CompressedTexture2D::277783141528465165::1745640146::1745705128::1::::<><>::
+tome.png::CompressedTexture2D::4498753587728487464::1745640146::1745705128::1::::<><>::
+tools.png::CompressedTexture2D::4186581003394506589::1745640146::1745705134::1::::<><>::
+upg_spear.png::CompressedTexture2D::7944092799548748336::1745640146::1745705134::1::::<><>::
+wand1.png::CompressedTexture2D::7588153154420427751::1745640146::1745705134::1::::<><>::
+wand2.png::CompressedTexture2D::8735341959912828438::1745640146::1745705134::1::::<><>::
+::res://assets/Card Sprites/Minion/::1745705136
+Alternate (1).png::CompressedTexture2D::1578177556675704614::1745640145::1745705135::1::::<><>::
+Alternate (2).png::CompressedTexture2D::2284248557218087515::1745640145::1745705135::1::::<><>::
+Alternate (3).png::CompressedTexture2D::2969746754403584540::1745640145::1745705135::1::::<><>::
+bg_card.png::CompressedTexture2D::1132223879878125468::1745640145::1745705135::1::::<><>::
+minion (1).png::CompressedTexture2D::1258593199977324802::1745640145::1745705135::1::::<><>::
+minion (2).png::CompressedTexture2D::6042722603169604147::1745640145::1745705135::1::::<><>::
+minion (3).png::CompressedTexture2D::3389399499340691495::1745640145::1745705135::1::::<><>::
+minion (4).png::CompressedTexture2D::3656773942171706766::1745640145::1745705135::1::::<><>::
+minion (5).png::CompressedTexture2D::3782225873473364030::1745640145::1745705135::1::::<><>::
+minion (6).png::CompressedTexture2D::5468454027794543858::1745640145::1745705136::1::::<><>::
+minion (7).png::CompressedTexture2D::5986396247701886057::1745640145::1745705136::1::::<><>::
+minion (8).png::CompressedTexture2D::3513313904119154387::1745640145::1745705136::1::::<><>::
+::res://assets/enemies/::1745640146
+::res://assets/enemies/1/::1745705136
+1.png::CompressedTexture2D::692374130605024691::1745640146::1745705136::1::::<><>::
+2.png::CompressedTexture2D::4530638725444937371::1745640146::1745705136::1::::<><>::
+3.png::CompressedTexture2D::8950262378196590729::1745640146::1745705136::1::::<><>::
+4.png::CompressedTexture2D::1456388206471518833::1745640146::1745705136::1::::<><>::
+::res://assets/Environment/::1745705134
+2.png::CompressedTexture2D::1698013890953423856::1745640146::1745705134::1::::<><>::
+17.png::CompressedTexture2D::4665155396681327243::1745640146::1745705134::1::::<><>::
+::res://assets/Environment/player/::1745705136
+Avatar.png::CompressedTexture2D::192575555813903545::1745640146::1745705136::1::::<><>::
+AvatarCircle.png::CompressedTexture2D::4388389058952896045::1745640146::1745705136::1::::<><>::
+BarHealth.png::CompressedTexture2D::3536090115695515948::1745640146::1745705136::1::::<><>::
+BarMana.png::CompressedTexture2D::3490744331358121725::1745640146::1745705136::1::::<><>::
+Border.png::CompressedTexture2D::5465919928813275468::1745640146::1745705136::1::::<><>::
+BqBar.png::CompressedTexture2D::7730378785586613559::1745640146::1745705136::1::::<><>::
+cursor.png::CompressedTexture2D::8932795528287130213::1745640146::1745705133::1::::<><>::
+Overlay Border + Overlay Level.png::CompressedTexture2D::6496542390290921737::1745640146::1745705133::1::::<><>::
+Overlay Border.png::CompressedTexture2D::1580591519610173549::1745640146::1745705133::1::::<><>::
+Overlay Level.png::CompressedTexture2D::579405723710214717::1745640146::1745705133::1::::<><>::
+paladin minion.png::CompressedTexture2D::3218681982032289931::1745640146::1745705133::1::::<><>::
+ProgressBar02.png::CompressedTexture2D::2806674053003638989::1745640146::1745705133::1::::<><>::
+ProgressBar03.png::CompressedTexture2D::5451469549381151168::1745640146::1745705133::1::::<><>::
+ProgressBar04.png::CompressedTexture2D::3923140206706598169::1745640146::1745705133::1::::<><>::
+::res://assets/Environment/status_icon/::1745705135
+5814838.png::CompressedTexture2D::5667617942683105837::1745640146::1745705133::1::::<><>::
+ataque.png::CompressedTexture2D::3451394920641099629::1745640146::1745705134::1::::<><>::
+attack.png::CompressedTexture2D::64698668490235163::1745640146::1745705134::1::::<><>::
+bleed.png::CompressedTexture2D::1612616348393731685::1745640146::1745705134::1::::<><>::
+block1.png::CompressedTexture2D::6543730730705413505::1745640146::1745705134::1::::<><>::
+block.png::CompressedTexture2D::2853101704084391705::1745640146::1745705134::1::::<><>::
+buff.png::CompressedTexture2D::7823305889362491743::1745640146::1745705134::1::::<><>::
+critico.png::CompressedTexture2D::8750475478798102509::1745640146::1745705134::1::::<><>::
+debuff.png::CompressedTexture2D::6299410464275755706::1745640146::1745705134::1::::<><>::
+defense.png::CompressedTexture2D::5284082223300753940::1745640146::1745705134::1::::<><>::
+escudo.png::CompressedTexture2D::8538424563591710231::1745640146::1745705134::1::::<><>::
+paralysis.png::CompressedTexture2D::5489261344528897911::1745640146::1745705134::1::::<><>::
+paralyzed.png::CompressedTexture2D::7617623180303808812::1745640146::1745705134::1::::<><>::
+poison.png::CompressedTexture2D::1332240443692993547::1745640146::1745705135::1::::<><>::
+upar.png::CompressedTexture2D::2834025195107827133::1745640146::1745705134::1::::<><>::
+::res://assets/font/::1745705127
+BEATTECH-Line.ttf::FontFile::856878379281082797::1745640146::1745705127::1::::<><>::
+BEATTECH.ttf::FontFile::4884158896143978648::1745640146::1745705127::1::::<><>::
+Berry Rotunda.ttf::FontFile::4801460953499636392::1745640146::1745705127::1::::<><>::
+digital-7 (italic).ttf::FontFile::4192248559547078270::1745640146::1745705127::1::::<><>::
+digital-7.ttf::FontFile::5894394784383882134::1745640146::1745705127::1::::<><>::
+njo_14.ttf::FontFile::4887497226440841355::1745640146::1745705127::1::::<><>::
+Pixelmania.ttf::FontFile::5028974822233807650::1745640146::1745705127::1::::<><>::
+::res://scenes/::1745640146
+::res://scenes/cards/::1745711536
+bloquear.tscn::PackedScene::1824676878326023463::1745710631::0::1::::<><>::uid://bjekvwsvl0b1h::::res://scenes/cards/card_base.tscn<>uid://7srifpev2ue2::::res://assets/Card Sprites/Minion/Alternate (2).png<>uid://b01ndeeun3a61::::res://assets/Card Sprites/images/shield1.png<>uid://cnb511x6opq0::::res://assets/Card Sprites/_Rarity/rarity (1).png
+card_base.gdshader::Shader::-1::1745711536::0::1::::<><>::
+card_base.tscn::PackedScene::3027023643341309975::1745710630::0::1::::<><>::uid://r6w31d608bf3::::res://assets/Card Sprites/Minion/minion (1).png<>res://scripts/card_base.gd<>uid://bt5eyb6ngcxic::::res://assets/Card Sprites/Minion/minion (5).png<>uid://crj4co0h4s6wb::::res://assets/Card Sprites/Minion/minion (7).png<>uid://cbvsmohw8mlwd::::res://assets/font/njo_14.ttf<>res://scenes/cards/card_base.gdshader<>uid://cj57vys2hswus::::res://assets/Card Sprites/Minion/minion (6).png<>uid://csde01y82clmp::::res://assets/Card Sprites/Minion/minion (2).png<>uid://boj36dh0anhjr::::res://assets/Card Sprites/Minion/minion (3).png
+corte.tscn::PackedScene::4758819965376774766::1745710631::0::1::::<><>::uid://bjekvwsvl0b1h::::res://scenes/cards/card_base.tscn<>uid://biktkbg7nnsp5::::res://assets/Card Sprites/Minion/Alternate (3).png<>uid://br2f0nihrdnvf::::res://assets/Card Sprites/images/sword1.png<>uid://cnb511x6opq0::::res://assets/Card Sprites/_Rarity/rarity (1).png
+corte_diagonal.tscn::PackedScene::4047970959125073199::1745710631::0::1::::<><>::uid://bjekvwsvl0b1h::::res://scenes/cards/card_base.tscn<>uid://biktkbg7nnsp5::::res://assets/Card Sprites/Minion/Alternate (3).png<>uid://dum7t1y0br321::::res://assets/Card Sprites/images/sword2.png<>uid://cnb511x6opq0::::res://assets/Card Sprites/_Rarity/rarity (1).png
+corte_tornado.tscn::PackedScene::5632831324463868351::1745710631::0::1::::<><>::uid://bjekvwsvl0b1h::::res://scenes/cards/card_base.tscn<>uid://biktkbg7nnsp5::::res://assets/Card Sprites/Minion/Alternate (3).png<>uid://dbx3gw7x3xrra::::res://assets/Card Sprites/images/axeDouble3.png
+envenenar.tscn::PackedScene::8936077668959949300::1745710631::0::1::::<><>::uid://bjekvwsvl0b1h::::res://scenes/cards/card_base.tscn<>uid://wqqma8eb720y::::res://assets/Card Sprites/Minion/Alternate (1).png<>uid://byxalfwtbesqh::::res://assets/Card Sprites/images/potionGreen.png<>uid://cnb511x6opq0::::res://assets/Card Sprites/_Rarity/rarity (1).png
+utilidade_2.tscn::PackedScene::3457011007510600477::1745640146::0::1::::<><>::uid://bjekvwsvl0b1h::::res://scenes/cards/card_base.tscn<>uid://wqqma8eb720y::::res://assets/Card Sprites/Minion/Alternate (1).png<>uid://s8l2nd8xm300::::res://assets/Environment/status_icon/poison.png<>uid://cnb511x6opq0::::res://assets/Card Sprites/_Rarity/rarity (1).png
+::res://scenes/enemies/::1745710631
+base_enemy.tscn::PackedScene::4509990845810513577::1745710631::0::1::::<><>::res://scripts/base_enemy.gd<>uid://diewhd2puo7v4::::res://assets/Environment/player/BqBar.png<>uid://cbvsmohw8mlwd::::res://assets/font/njo_14.ttf<>uid://j4nkhxvbodf4::::res://assets/enemies/1/1.png<>uid://cj4y5xpvhwuwq::::res://assets/Environment/player/Border.png<>uid://b5sw7tki2sa72::::res://assets/enemies/1/2.png<>uid://bv5nstha4sxev::::res://assets/Environment/player/ProgressBar04.png<>uid://d0rtrp4hpvo2d::::res://assets/enemies/1/3.png<>uid://d0jd3p4nq6cd6::::res://assets/Environment/player/cursor.png<>uid://u0qrberc2wwv::::res://assets/enemies/1/4.png<>uid://bpf478olk18er::::res://assets/Environment/status_icon/ataque.png<>uid://cm0o3sonrajcv::::res://assets/Environment/status_icon/5814838.png<>res://scripts/action_ballon.gd<>uid://csde01y82clmp::::res://assets/Card Sprites/Minion/minion (2).png<>uid://bgwcfyp3kr1u8::::res://assets/Environment/status_icon/block.png
+::res://scenes/enviroment/::1745711536
+battlefield.tscn::PackedScene::5231330632624559576::1745710722::0::1::::<><>::res://scripts/battlefield.gd<>uid://b5iw5jg31baab::::res://scenes/enemies/base_enemy.tscn<>uid://ygsbnbykkuwe::::res://assets/Environment/2.png<>uid://5wkrskl1xh3u::::res://scenes/enviroment/player.tscn<>uid://cp13lbvmsx8ob::::res://scenes/enviroment/hud.tscn<>res://scripts/player_hand.gd<>uid://crpuovbnrxc20::::res://assets/Card Sprites/Card Back/_experimental (3).png<>uid://cbvsmohw8mlwd::::res://assets/font/njo_14.ttf
+hud.gdshader::Shader::-1::1745711536::0::1::::<><>::
+hud.tscn::PackedScene::5881067648627121529::1745710631::0::1::::<><>::uid://diewhd2puo7v4::::res://assets/Environment/player/BqBar.png<>uid://cj4y5xpvhwuwq::::res://assets/Environment/player/Border.png<>uid://bv5nstha4sxev::::res://assets/Environment/player/ProgressBar04.png<>uid://cbvsmohw8mlwd::::res://assets/font/njo_14.ttf<>uid://cjwy53rckchoy::::res://assets/Environment/player/ProgressBar03.png<>res://scenes/enviroment/hud.gdshader<>uid://bl4fhsvbs60mx::::res://assets/Environment/player/paladin minion.png<>uid://b3r1ekn3aeoif::::res://assets/Environment/player/AvatarCircle.png<>uid://wrwd11qyuvhl::::res://assets/Environment/player/Overlay Border.png<>uid://bgwcfyp3kr1u8::::res://assets/Environment/status_icon/block.png<>uid://bpf478olk18er::::res://assets/Environment/status_icon/ataque.png<>uid://dtwcutqgc1njb::::res://assets/Environment/status_icon/escudo.png
+player.tscn::PackedScene::2151720109558128672::1745710902::0::1::::<><>::res://scripts/player.gd
+::res://scenes/status/::1745640146
+base_status.tscn::PackedScene::1403753546779760507::1745640146::0::1::::<><>::res://scripts/base_status.gd<>uid://s8l2nd8xm300::::res://assets/Environment/status_icon/poison.png<>uid://cbvsmohw8mlwd::::res://assets/font/njo_14.ttf
+bleed.tscn::PackedScene::8240155159459942147::1745640146::0::1::::<><>::uid://t88u65mpnlst::::res://scenes/status/base_status.tscn
+block.tscn::PackedScene::2219046973750843446::1745640146::0::1::::<><>::uid://t88u65mpnlst::::res://scenes/status/base_status.tscn<>uid://c0h3j3ge7ggq0::::res://assets/Environment/status_icon/block1.png
+paralyzed.tscn::PackedScene::2509592901640009510::1745640146::0::1::::<><>::uid://t88u65mpnlst::::res://scenes/status/base_status.tscn
+poison.tscn::PackedScene::8671969979722627433::1745640146::0::1::::<><>::uid://t88u65mpnlst::::res://scenes/status/base_status.tscn
+::res://scripts/::1745710630
+action_ballon.gd::GDScript::-1::1745708185::0::1::::ActionBallon<>TextureRect<>::
+base_enemy.gd::GDScript::-1::1745710630::0::1::::BaseEnemy<>CharacterBody2D<>::
+base_status.gd::GDScript::-1::1745640146::0::1::::BaseStatus<>TextureRect<>::
+battlefield.gd::GDScript::-1::1745710453::0::1::::Battlefield<>Control<>::
+card_base.gd::GDScript::-1::1745640146::0::1::::CardBase<>Control<>::
+player.gd::GDScript::-1::1745709002::0::1::::Player<>Node<>::
+player_hand.gd::GDScript::-1::1745710036::0::1::::PlayerHand<>HBoxContainer<>::
+::res://scripts/global/::1745710722
+card_factory.gd::GDScript::-1::1745710722::0::1::::CardList<>Node<>::
