@@ -9,7 +9,7 @@ card_name = "Poção de Vida"
 card_id = "pocao_vida"
 card_value = 20
 times_used = 1
-card_type = "buff"
+card_type = "effect"
 
 [node name="Sprite" parent="Background" index="2"]
 offset_left = -81.4444
@@ -21,7 +21,7 @@ texture = ExtResource("3_aql45")
 text = "Poção de Vida"
 
 [node name="Type" parent="Background/Type" index="0"]
-text = "Buff"
+text = "Efeito"
 
 [node name="Rarity" parent="Background/BoxDescription" index="0"]
 texture = ExtResource("4_asjy0")

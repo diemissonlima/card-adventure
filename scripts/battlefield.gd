@@ -49,36 +49,22 @@ func get_card_in_use(card: Control) -> void:
 			else:
 				return
 			
-		"buff":
+		"effect":
 			perform_action_card(card_used, player)
+			
+	player.spend_energy()
 
 
 # executa a ação da carta
 func perform_action_card(card, target) -> void:
 	if target is BaseEnemy:
-		var damage: int = player.damage + card.card_value
+		target.apply_card_effect(card, player.damage)
 		
-		if card.card_type == "attack" and card.attack_type == "single": # ataque ao unico alvo
-			target.take_damage(damage, card.times_used, "physical")
-			
-		elif card.card_type == "attack" and card.attack_type == "multiple": # ataque a multiplos alvos
-			for enemy in get_tree().get_nodes_in_group("enemy"):
-				enemy.take_damage(damage, card.times_used, "physical")
-			
-		elif card.card_type == "technique": # carta de tecnica
-			target.apply_status(card.status_type)
-			
 	elif target is Player:
-		if card.card_type == "defense":
-			player.apply_card_effect(card)
-		
-		elif card.card_type == "buff":
-			player.apply_card_effect(card)
+		player.apply_card_effect(card)
 	
-	player.spend_energy() # gasta uma energia
-	if card.card_name.ends_with("Rápido"):
-		player.actions += 1
-		player.update_bar()
+	if card.card_id == "corte_rapido":
+		player.gain_energy(1)
 		
 	$Background/Player/PlayerHand.discard_pile.append(card.card_id) # descarta a carta
 	card.queue_free() # deleta a carta da cena

@@ -77,6 +77,20 @@ func take_damage(value: int, times_used: int, damage_type: String) -> void:
 	
 	update_bar()
 
+# aplica o efeito da carta
+func apply_card_effect(card: Control, player_damage: int) -> void:
+	var damage_caused: int = player_damage + card.card_value
+	
+	if card.card_type == "attack" and card.attack_type == "single":
+		take_damage(damage_caused, card.times_used, card.damage_type)
+	
+	elif card.card_type == "attack" and card.attack_type == "multiple":
+		for enemy in get_tree().get_nodes_in_group("enemy"):
+			enemy.take_damage(damage_caused, card.times_used, card.damage_type)
+			
+	elif card.card_type == "technique": # carta de tecnica
+		apply_status(card.status_type)
+
 
 # mostra o status no modifiers_container
 func apply_status(type: String) -> void:

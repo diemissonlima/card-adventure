@@ -71,11 +71,13 @@ func update_label() -> void:
 	defense_label.text = "Def " + str(defense)
 
 
+# envia o deck para o battlefield
 func send_deck_to_battlefield() -> void:
 	var deck: Array = deck_list.duplicate()
 	get_tree().call_group("player_hand", "get_player_deck", deck)
 
 
+# função que recebe o dano
 func take_damage(value: int, type: String) -> void:
 	if shield > 0 and type == "physical":
 		if value <= shield:
@@ -93,20 +95,21 @@ func take_damage(value: int, type: String) -> void:
 	health -= value
 	update_bar()
 
-
+# aplica o efeito da carta
 func apply_card_effect(card: Control) -> void:
 	if card.card_type == "defense":
 		shield += (card.card_value + defense)
 		hud.get_node("ShieldContainer").show()
 		hud.get_node("ShieldContainer/Label").text = str(shield)
 	
-	if card.card_type == "buff":
+	if card.card_type == "effect":
 		if card.card_id == "pocao_vida":
-			health += 20
+			health += 20 # na verdade é pra calcular com base na vida maxima, corrigir depois
 			if health > max_health:
 				health = max_health
 
 
+# aplica o status
 func apply_status(type: String, value: int) -> void:
 	var status_instance
 	if modifiers_container.get_child_count() <= 0:
@@ -128,6 +131,7 @@ func apply_status(type: String, value: int) -> void:
 			break
 
 
+# aplica o efeito do status
 func apply_status_effect() -> void:
 	if modifiers_container.get_child_count() <= 0:
 		return
@@ -137,6 +141,7 @@ func apply_status_effect() -> void:
 			take_damage(calculate_status_damage("poison", status.status_modifier), "status")
 
 
+# calcula o dano conforme o tipo de status
 func calculate_status_damage(status: String, modifier: int) -> int:
 	var status_damage
 	
@@ -146,6 +151,7 @@ func calculate_status_damage(status: String, modifier: int) -> int:
 	return status_damage
 
 
+# atualiza a durabilidade do status
 func update_status() -> void:
 	if modifiers_container.get_child_count() <= 0:
 		return
@@ -154,6 +160,13 @@ func update_status() -> void:
 		status.update_durability("decrease")
 
 
+# gasta energia
 func spend_energy() -> void:
 	actions -= 1
+	update_bar()
+
+
+# ganha energia
+func gain_energy(quantity: int) -> void:
+	actions += quantity
 	update_bar()

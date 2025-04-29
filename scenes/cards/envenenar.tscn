@@ -10,6 +10,8 @@ card_name = "Envenenar"
 card_id = "envenenar"
 times_used = 1
 card_type = "technique"
+attack_type = "single"
+damage_type = "status"
 status_type = "poison"
 
 [node name="Background" parent="." index="0"]

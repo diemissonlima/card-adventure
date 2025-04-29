@@ -12,7 +12,7 @@ card_value = 3
 times_used = 1
 card_type = "attack"
 attack_type = "multiple"
-status_type = "null"
+damage_type = "physical"
 
 [node name="Background" parent="." index="0"]
 texture = ExtResource("2_knrnv")

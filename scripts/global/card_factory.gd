@@ -8,9 +8,11 @@ var card_list: Dictionary = {
 	"corte_rapido": "res://scenes/cards/corte_rapido.tscn",
 	"bloquear": "res://scenes/cards/bloquear.tscn",
 	"envenenar": "res://scenes/cards/envenenar.tscn",
-	"pocao_vida": "res://scenes/cards/pocao_vida.tscn"
+	"pocao_vida": "res://scenes/cards/pocao_vida.tscn",
+	"fortalecer": "res://scenes/cards/fortalecer.tscn"
 }
 
-# adicionado +2 card (corte rapido, pocao de vida)
-# dano de veneno sendo calculado com base na vida maxima
-# criado 3 novos inimigos
+# alterado o tipo de carta de buff para effect
+# refatoração de codigo, algumas funções foram retiradas do script battlefield
+# e passado para seus respectivos objetos
+# criado +1 card (fortalecer) faltando implementar o que ela faz

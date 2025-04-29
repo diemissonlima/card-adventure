@@ -2,14 +2,15 @@ extends Control
 class_name CardBase
 
 @export_category("Variaveis")
-@export var card_name: String
-@export var card_id: String
-@export var card_cost: int = 1
-@export var card_value: int
-@export var times_used: int
-@export_enum("attack", "defense", "technique", "buff") var card_type: String
-@export_enum("single", "multiple") var attack_type: String
-@export_enum("null", "block", "poison", "paralyzed", "bleed") var status_type: String
+@export var card_name: String # nome da carta
+@export var card_id: String # id da carta
+@export var card_cost: int = 1 # custo em energia da carta
+@export var card_value: int # atributo da carta, ex: ataque -> value=dano
+@export var times_used: int # vezes utilizada ex: ataque duplo, ela é usada 2x
+@export_enum("attack", "defense", "technique", "effect") var card_type: String # tipo da carta
+@export_enum("single", "multiple") var attack_type: String # tipo de ataque
+@export_enum("physical", "status") var damage_type: String # tipo de dano causado
+@export_enum("null", "block", "poison", "paralyzed", "bleed") var status_type: String # status que a carta aplica
 
 var can_click: bool = false
 
