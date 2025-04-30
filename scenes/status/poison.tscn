@@ -5,10 +5,9 @@
 [node name="Poison" instance=ExtResource("1_10wki")]
 offset_right = 20.0
 offset_bottom = 20.0
-expand_mode = 1
 status_name = "poison"
 status_modifier = 15
-status_description = "Causa 15 de dano de Veneno"
+status_description = "Causa dano de veneno de 15% da vida máxima"
 
 [node name="Durability" parent="." index="0"]
 offset_left = -14.0

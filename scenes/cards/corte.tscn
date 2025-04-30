@@ -13,6 +13,7 @@ times_used = 1
 card_type = "attack"
 attack_type = "single"
 damage_type = "physical"
+status_type = "null"
 
 [node name="Background" parent="." index="0"]
 texture = ExtResource("2_teh1m")

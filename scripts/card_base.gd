@@ -9,8 +9,8 @@ class_name CardBase
 @export var times_used: int # vezes utilizada ex: ataque duplo, ela é usada 2x
 @export_enum("attack", "defense", "technique", "effect") var card_type: String # tipo da carta
 @export_enum("single", "multiple") var attack_type: String # tipo de ataque
-@export_enum("physical", "status") var damage_type: String # tipo de dano causado
-@export_enum("null", "block", "poison", "paralyzed", "bleed") var status_type: String # status que a carta aplica
+@export_enum("null", "physical", "status") var damage_type: String # tipo de dano causado
+@export_enum("null", "block", "poison", "paralyzed", "bleed", "strength") var status_type: String # status que a carta aplica
 
 var can_click: bool = false
 

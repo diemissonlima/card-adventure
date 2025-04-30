@@ -23,6 +23,10 @@ var attack_label = null
 var defense_label = null
 var modifiers_container = null
 
+var previous_damage: int = 0
+var bonus_damage: float = 0.0
+var is_strengthened: bool = false
+
 
 func _ready() -> void:
 	init_bar()
@@ -30,6 +34,11 @@ func _ready() -> void:
 	send_deck_to_battlefield()
 	
 	modifiers_container = hud.get_node("Modifiers")
+
+
+func interpolate_health(new_value: int, duration:=0.3) -> void:
+	var tween = create_tween()
+	tween.tween_property(health_bar, "value", new_value, duration).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 
 
 func init_bar() -> void:
@@ -61,6 +70,9 @@ func update_bar() -> void:
 	action_bar.value = actions
 	action_bar.get_node("Label").text = str(actions)
 	
+	attack_label.text = str(damage)
+	defense_label.text = str(defense)
+	
 	hud.get_node("ShieldContainer/Label").text = str(shield)
 	if shield <= 0:
 		hud.get_node("ShieldContainer").visible = false
@@ -84,16 +96,17 @@ func take_damage(value: int, type: String) -> void:
 			shield -= value
 			update_bar()
 			return
-			
 		else:
 			var leftover = value - shield
 			shield = 0
 			health -= leftover
-			update_bar()
+			interpolate_health(health)
+			#update_bar()
 			return
 	
 	health -= value
-	update_bar()
+	interpolate_health(health)
+	#update_bar()
 
 # aplica o efeito da carta
 func apply_card_effect(card: Control) -> void:
@@ -107,28 +120,36 @@ func apply_card_effect(card: Control) -> void:
 			health += 20 # na verdade é pra calcular com base na vida maxima, corrigir depois
 			if health > max_health:
 				health = max_health
+		
+		if card.card_id == "fortalecer":
+			calculate_bonus_damage(card.card_value)
+			apply_status(card.status_type)
+			is_strengthened = true
+			gain_energy(1)
 
 
 # aplica o status
-func apply_status(type: String, value: int) -> void:
+func apply_status(type: String) -> void:
 	var status_instance
-	if modifiers_container.get_child_count() <= 0:
+	if modifiers_container.get_child_count() <= 5:
 		match type:
 			"poison":
 				status_instance = preload("res://scenes/status/poison.tscn")
 			
 			"paralyzed":
 				pass
-				
+			
+			"strength":
+				status_instance = preload("res://scenes/status/strength.tscn")
+		
+		# verificar se status aplicado ja existe no player
+		for status in modifiers_container.get_children():
+			if status.status_name == type:
+				status.update_durability("increase")
+				return
+		
 		var status_scene = status_instance.instantiate()
 		modifiers_container.add_child(status_scene)
-		return
-	
-	# verificar se status aplicado ja existe no player
-	for status in modifiers_container.get_children():
-		if status.status_name == type:
-			status.update_durability("increase")
-			break
 
 
 # aplica o efeito do status
@@ -160,6 +181,23 @@ func update_status() -> void:
 		status.update_durability("decrease")
 
 
+func calculate_bonus_damage(damage_modifier: float) -> void:
+	if not is_strengthened:
+		previous_damage = damage
+		bonus_damage = damage * damage_modifier / 100
+		damage += round(bonus_damage)
+		
+		update_bar()
+
+
+func clear_bonus_damage() -> void:
+	is_strengthened = false
+	bonus_damage = 0.0
+	damage = previous_damage
+	
+	update_bar()
+
+
 # gasta energia
 func spend_energy() -> void:
 	actions -= 1
@@ -168,5 +206,6 @@ func spend_energy() -> void:
 
 # ganha energia
 func gain_energy(quantity: int) -> void:
+	await get_tree().create_timer(0.5).timeout
 	actions += quantity
 	update_bar()

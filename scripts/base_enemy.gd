@@ -142,8 +142,8 @@ func get_action() -> void:
 	$ActionBallon.show()
 	
 	if action == "attack":
-		$ActionBallon/ActionInfo/Label.text = "Causa " + str(damage) + " de dano"
 		damage = randi_range(5, 15)
+		$ActionBallon/ActionInfo/Label.text = "Causa " + str(damage) + " de dano"
 	elif action == "defense":
 		shield_value = randi_range(5, 10)
 		$ActionBallon/ActionInfo/Label.text = "Recebe " + str(shield_value) + " de escudo"

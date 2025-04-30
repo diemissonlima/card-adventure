@@ -10,6 +10,9 @@ card_id = "pocao_vida"
 card_value = 20
 times_used = 1
 card_type = "effect"
+attack_type = "single"
+damage_type = "null"
+status_type = "null"
 
 [node name="Sprite" parent="Background" index="2"]
 offset_left = -81.4444

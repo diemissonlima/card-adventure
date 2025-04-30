@@ -7,9 +7,12 @@
 [node name="Fortalecer" instance=ExtResource("1_hr7cu")]
 card_name = "Fortalecer"
 card_id = "fortalecer"
-card_value = 25
+card_value = 20
 times_used = 1
 card_type = "effect"
+attack_type = "single"
+damage_type = "null"
+status_type = "strength"
 
 [node name="Sprite" parent="Background" index="2"]
 offset_left = -46.7778

@@ -30,7 +30,6 @@ animations = [{
 enemy_name = "Necromante"
 max_health = 175
 health = 175
-damage = 15
 actions_list = Array[String](["attack", "defense", "poison"])
 
 [node name="Animation" parent="." index="3"]

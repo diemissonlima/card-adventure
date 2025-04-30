@@ -53,6 +53,9 @@ func get_card_in_use(card: Control) -> void:
 			perform_action_card(card_used, player)
 			
 	player.spend_energy()
+	
+	if card.card_id == "corte_rapido":
+		player.gain_energy(1)
 
 
 # executa a ação da carta
@@ -62,9 +65,6 @@ func perform_action_card(card, target) -> void:
 		
 	elif target is Player:
 		player.apply_card_effect(card)
-	
-	if card.card_id == "corte_rapido":
-		player.gain_energy(1)
 		
 	$Background/Player/PlayerHand.discard_pile.append(card.card_id) # descarta a carta
 	card.queue_free() # deleta a carta da cena
@@ -85,7 +85,7 @@ func perform_enemy_action(enemy: BaseEnemy) -> void:
 			player.take_damage(enemy.damage, "physical")
 		
 		"poison":
-			player.apply_status("poison", 1)
+			player.apply_status("poison")
 
 
 # função executada quando o mouse entrar na area do inimigo

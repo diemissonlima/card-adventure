@@ -24,6 +24,9 @@ func update_durability(type: String) -> void:
 			status_durability -= 1
 	
 	if status_durability <= 0:
+		if status_name == "strength":
+			get_tree().call_group("player", "clear_bonus_damage")
+			await get_tree().create_timer(0.5).timeout
 		queue_free()
 		return
 	

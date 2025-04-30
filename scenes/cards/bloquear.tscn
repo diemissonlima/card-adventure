@@ -11,6 +11,8 @@ card_id = "bloquear"
 card_value = 5
 times_used = 1
 card_type = "defense"
+attack_type = "single"
+damage_type = "null"
 status_type = "block"
 
 [node name="Background" parent="." index="0"]

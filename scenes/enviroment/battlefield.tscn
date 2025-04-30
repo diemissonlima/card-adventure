@@ -56,17 +56,17 @@ position = Vector2(0, -8)
 [node name="Enemy1" type="Marker2D" parent="Background/Enemies"]
 position = Vector2(576, 276)
 
-[node name="Golem" parent="Background/Enemies/Enemy1" instance=ExtResource("4_4oq1c")]
+[node name="Necromante" parent="Background/Enemies/Enemy1" instance=ExtResource("6_my5e6")]
 
 [node name="Enemy2" type="Marker2D" parent="Background/Enemies"]
 position = Vector2(926, 351)
 
-[node name="Golem2" parent="Background/Enemies/Enemy2" instance=ExtResource("5_k1ib0")]
+[node name="Golem" parent="Background/Enemies/Enemy2" instance=ExtResource("4_4oq1c")]
 
 [node name="Enemy3" type="Marker2D" parent="Background/Enemies"]
 position = Vector2(226, 351)
 
-[node name="Necromante" parent="Background/Enemies/Enemy3" instance=ExtResource("6_my5e6")]
+[node name="Golem2" parent="Background/Enemies/Enemy3" instance=ExtResource("5_k1ib0")]
 
 [node name="Player" parent="Background" node_paths=PackedStringArray("hud") instance=ExtResource("4_ge5ri")]
 hud = NodePath("../../CanvasLayer")
