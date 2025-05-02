@@ -30,7 +30,8 @@ animations = [{
 enemy_name = "Necromante"
 max_health = 175
 health = 175
-actions_list = Array[String](["attack", "defense", "poison"])
+range_damage = Array[int]([20, 30])
+actions_list = Array[String](["attack"])
 
 [node name="Animation" parent="." index="3"]
 sprite_frames = SubResource("SpriteFrames_scnee")

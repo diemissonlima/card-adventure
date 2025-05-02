@@ -31,6 +31,7 @@ enemy_name = "Golem"
 max_health = 150
 health = 150
 damage = 12
+range_damage = Array[int]([10, 20])
 
 [node name="Animation" parent="." index="3"]
 sprite_frames = SubResource("SpriteFrames_nrnba")

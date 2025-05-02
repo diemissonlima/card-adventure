@@ -10,5 +10,8 @@ var card_list: Dictionary = {
 	"envenenar": "res://scenes/cards/envenenar.tscn",
 	"pocao_vida": "res://scenes/cards/pocao_vida.tscn",
 	"fortalecer": "res://scenes/cards/fortalecer.tscn",
-	"nevoa_venenosa": "res://scenes/cards/nevoa_venenosa.tscn"
+	"nevoa_venenosa": "res://scenes/cards/nevoa_venenosa.tscn",
+	"enfraquecer": "res://scenes/cards/enfraquecer.tscn"
 }
+
+# adcionado +1 card (enfraquecer)

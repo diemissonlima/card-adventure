@@ -12,11 +12,14 @@ class_name BaseEnemy
 @export var max_health: int
 @export var health: int
 @export var damage: int
+@export var range_damage: Array[int]
 @export var shield: int
 # essas duas variaveis sao usadas somente no action ballon
 @export var actions_list: Array[String]
 @export var actions_list_icons: Dictionary
 
+var previous_damage: int = 0
+var is_weakened: bool = false
 var action: String = ""
 var shield_value: int = 0
 
@@ -96,6 +99,10 @@ func apply_card_effect(card: Control, player_damage: int) -> void:
 			return
 			
 		apply_status(card.status_type)
+	
+	elif card.card_type == "effect":
+		if card.status_type == "weaken":
+			apply_status(card.status_type)
 
 
 # mostra o status no modifiers_container
@@ -107,9 +114,17 @@ func apply_status(type: String) -> void:
 			"poison":
 				status_instance = preload("res://scenes/status/poison.tscn")
 			
+			"weaken":
+				status_instance = preload("res://scenes/status/weaken.tscn")
+				if not is_weakened:
+					is_weakened = true
+					previous_damage = damage
+					damage -= damage / 2
+					update_action_ballon()
+				
 			"paralyzed":
-				status_instance = preload("res://scenes/status/poison.tscn")
-		
+				pass
+				
 		var status_scene = status_instance.instantiate()
 		$Modifiers.add_child(status_scene)
 		return
@@ -128,7 +143,7 @@ func apply_status_effect() -> void:
 			match status.status_name:
 				"poison":
 					take_damage(calculate_status_damage("poison", status.status_modifier), 1, "status")
-	
+					
 	update_status()
 
 
@@ -148,13 +163,19 @@ func get_action() -> void:
 	$ActionBallon.show()
 	
 	if action == "attack":
-		damage = randi_range(5, 15)
+		damage = randi_range(range_damage[0], range_damage[1])
+		if is_weakened:
+			damage -= damage / 2
 		$ActionBallon/ActionInfo/Label.text = "Causa " + str(damage) + " de dano"
 	elif action == "defense":
 		shield_value = randi_range(5, 10)
 		$ActionBallon/ActionInfo/Label.text = "Recebe " + str(shield_value) + " de escudo"
 	elif action == "poison":
 		$ActionBallon/ActionInfo/Label.text = "Causa 1 de Veneno"
+
+
+func update_action_ballon() -> void:
+	$ActionBallon/ActionInfo/Label.text = "Causa " + str(damage) + " de dano"
 
 
 # atualiza o status 
@@ -164,6 +185,12 @@ func update_status() -> void:
 	
 	for status in modifiers_container.get_children():
 		status.update_durability("decrease")
+
+
+func clear_negative_effects(effect: String) -> void:
+	match effect:
+		"weaken":
+			is_weakened = false
 
 
 # método de morte

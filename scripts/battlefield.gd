@@ -50,12 +50,14 @@ func get_card_in_use(card: Control) -> void:
 				return
 			
 		"effect":
+			if card_used.card_id == "enfraquecer":
+				if target_enemy == null:
+					return
+				else:
+					perform_action_card(card_used, target_enemy)
+					return
+				
 			perform_action_card(card_used, player)
-			
-	player.spend_energy()
-	
-	if card.card_id == "corte_rapido":
-		player.gain_energy(1)
 
 
 # executa a ação da carta
@@ -65,7 +67,11 @@ func perform_action_card(card, target) -> void:
 		
 	elif target is Player:
 		player.apply_card_effect(card)
-		
+	
+	player.spend_energy()
+	if card.card_id == "corte_rapido":
+		player.gain_energy(1)
+	
 	$Background/Player/PlayerHand.discard_pile.append(card.card_id) # descarta a carta
 	card.queue_free() # deleta a carta da cena
 	

@@ -31,6 +31,7 @@ enemy_name = "Golem"
 max_health = 100
 health = 100
 damage = 10
+range_damage = Array[int]([5, 15])
 actions_list = Array[String](["defense", "attack"])
 
 [node name="Animation" parent="." index="3"]

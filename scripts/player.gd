@@ -101,6 +101,7 @@ func take_damage(value: int, type: String) -> void:
 	health -= value
 	update_bar()
 
+
 # aplica o efeito da carta
 func apply_card_effect(card: Control) -> void:
 	if card.card_type == "defense":
@@ -182,7 +183,7 @@ func calculate_bonus_damage(damage_modifier: float) -> void:
 		update_bar()
 
 
-func clear_bonus_damage() -> void:
+func clear_bonus_damage() -> void: # funcao chamada pelo base_status
 	is_strengthened = false
 	bonus_damage = 0.0
 	damage = previous_damage
