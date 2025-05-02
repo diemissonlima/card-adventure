@@ -36,11 +36,6 @@ func _ready() -> void:
 	modifiers_container = hud.get_node("Modifiers")
 
 
-func interpolate_health(new_value: int, duration:=0.3) -> void:
-	var tween = create_tween()
-	tween.tween_property(health_bar, "value", new_value, duration).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
-
-
 func init_bar() -> void:
 	health_bar = hud.get_node("HealthBar")
 	action_bar = hud.get_node("ActionsBar")
@@ -100,13 +95,11 @@ func take_damage(value: int, type: String) -> void:
 			var leftover = value - shield
 			shield = 0
 			health -= leftover
-			interpolate_health(health)
-			#update_bar()
+			update_bar()
 			return
 	
 	health -= value
-	interpolate_health(health)
-	#update_bar()
+	update_bar()
 
 # aplica o efeito da carta
 func apply_card_effect(card: Control) -> void:
@@ -186,7 +179,6 @@ func calculate_bonus_damage(damage_modifier: float) -> void:
 		previous_damage = damage
 		bonus_damage = damage * damage_modifier / 100
 		damage += round(bonus_damage)
-		
 		update_bar()
 
 
@@ -194,7 +186,6 @@ func clear_bonus_damage() -> void:
 	is_strengthened = false
 	bonus_damage = 0.0
 	damage = previous_damage
-	
 	update_bar()
 
 

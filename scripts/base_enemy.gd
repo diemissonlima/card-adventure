@@ -57,12 +57,13 @@ func take_damage(value: int, times_used: int, damage_type: String) -> void:
 			var leftover = new_damage - shield
 			shield = 0
 			health -= leftover
+			update_bar()
 			play_animation("hit")
 			
 			if health <= 0:
 				health = 0
 				kill()
-				
+			
 			update_bar()
 			return
 	
@@ -89,6 +90,11 @@ func apply_card_effect(card: Control, player_damage: int) -> void:
 			enemy.take_damage(damage_caused, card.times_used, card.damage_type)
 			
 	elif card.card_type == "technique": # carta de tecnica
+		if card.attack_type == "multiple":
+			for enemy in get_tree().get_nodes_in_group("enemy"):
+				enemy.apply_status(card.status_type)
+			return
+			
 		apply_status(card.status_type)
 
 
